@@ -1,0 +1,47 @@
+if game.PlaceId == 189707 then
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+	local Window = Library.CreateLib("PETITE HUB", "BloodTheme")
+	local FARM = Window:NewTab("FARM")
+	local PLAYER = Window:NewTab("PLAYER")
+
+--farm--
+local Section = FARM:NewSection("Farm pra farm")
+
+Section:NewButton("AFK", "executa script de afk", function()
+  loadstring(game:HttpGet("https://pastebin.com/raw/sDXcYFhR", true))()
+end)
+
+Section:NewToggle("LoopTP", "ToggleInfo", function(state)
+    if state then
+		getgenv().Chest = true;
+ 
+		while wait(0.1) do
+			if getgenv().Chest == true then	
+
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-236.784683, 179.597992, 330.742004, 0.965929627, 0, 0.258804798, 0, 1, 0, -0.258804798, 0, 0.965929627)
+
+
+end
+end
+    else
+		getgenv().Chest = false;
+ 
+		while wait(0.1) do
+			if getgenv().Chest == true then	
+
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-236.784683, 179.597992, 330.742004, 0.965929627, 0, 0.258804798, 0, 1, 0, -0.258804798, 0, 0.965929627)
+
+
+end
+end
+    end
+end)
+--Player--
+local Section = PLAYER:NewSection("Player (Nao recomendo pra n morrer)")
+Section:NewSlider("Speed", "SliderInfo", 500, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+Section:NewSlider("JumpPower", "SliderInfo", 500, 16, function(d) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = d
+end)
+end
