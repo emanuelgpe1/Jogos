@@ -1,0 +1,162 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local o = Instance.new("ScreenGui")
+local o_2 = Instance.new("Frame")
+local CLOSE = Instance.new("ImageButton")
+local Off = Instance.new("TextButton")
+local On = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+
+--Properties:
+
+o.Name = "o"
+o.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+o.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+o_2.Name = "o"
+o_2.Parent = o
+o_2.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
+o_2.BorderColor3 = Color3.fromRGB(255, 0, 0)
+o_2.BorderSizePixel = 2
+o_2.Position = UDim2.new(0.343848586, 0, 0.148083627, 0)
+o_2.Size = UDim2.new(0, 313, 0, 276)
+
+CLOSE.Name = "CLOSE"
+CLOSE.Parent = o_2
+CLOSE.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CLOSE.BackgroundTransparency = 1.000
+CLOSE.BorderSizePixel = 0
+CLOSE.Position = UDim2.new(0.0357543528, 0, 0.0483623222, 0)
+CLOSE.Size = UDim2.new(0.0839110389, 0, 0.079283312, 0)
+CLOSE.ZIndex = 2
+CLOSE.Image = "http://www.roblox.com/asset/?id=645779217"
+
+Off.Name = "Off"
+Off.Parent = o_2
+Off.BackgroundColor3 = Color3.fromRGB(191, 0, 0)
+Off.Position = UDim2.new(0.0382630602, 0, 0.754816592, 0)
+Off.Size = UDim2.new(0.918313444, 0, 0.198850125, 0)
+Off.Font = Enum.Font.Garamond
+Off.Text = "Desligado"
+Off.TextColor3 = Color3.fromRGB(0, 0, 0)
+Off.TextScaled = true
+Off.TextSize = 14.000
+Off.TextWrapped = true
+
+On.Name = "On"
+On.Parent = o_2
+On.BackgroundColor3 = Color3.fromRGB(60, 180, 0)
+On.Position = UDim2.new(0.0382630602, 0, 0.44772014, 0)
+On.Size = UDim2.new(0.918313444, 0, 0.198850125, 0)
+On.Font = Enum.Font.Garamond
+On.Text = "Ligado"
+On.TextColor3 = Color3.fromRGB(0, 0, 0)
+On.TextScaled = true
+On.TextSize = 14.000
+On.TextWrapped = true
+
+TextLabel.Parent = o_2
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderSizePixel = 0
+TextLabel.Size = UDim2.new(0, 311, 0, 50)
+TextLabel.Font = Enum.Font.Fondamento
+TextLabel.Text = "PETITE HUB"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+-- Scripts:
+
+local function UXTN_fake_script() -- CLOSE.fechar 
+	local script = Instance.new('LocalScript', CLOSE)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.o.Visible = false
+	end)
+	
+	
+	
+	
+end
+coroutine.wrap(UXTN_fake_script)()
+local function YQSIQ_fake_script() -- Off.LocalScript 
+	local script = Instance.new('LocalScript', Off)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/SenpaiSripter/Fails/main/AnimalSimulatorFail" , true))()
+	end)
+	
+end
+coroutine.wrap(YQSIQ_fake_script)()
+local function PGSAN_fake_script() -- On.LocalScript 
+	local script = Instance.new('LocalScript', On)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		_G.toggle = true
+		while _G.toggle == true do
+			for i,v in pairs(game.Workspace.Chests.Spawns:GetChildren()) do
+				-- game:GetService("Workspace").Chests.Spawns
+				if v:IsA("Part") then
+					if _G.toggle ~= true then return end
+					wait(0.3)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+				end
+			end
+		end
+	end)
+	
+end
+coroutine.wrap(PGSAN_fake_script)()
+local function FGRQUCE_fake_script() -- o_2.LocalScript 
+	local script = Instance.new('LocalScript', o_2)
+
+	local dragger = {}; 
+	local resizer = {};
+	
+	do
+		local mouse = game:GetService("Players").LocalPlayer:GetMouse();
+		local inputService = game:GetService('UserInputService');
+		local heartbeat = game:GetService("RunService").Heartbeat;
+		-- // credits to Ririchi / Inori for this cute drag function :)
+		function dragger.new(frame)
+		    local s, event = pcall(function()
+		    	return frame.MouseEnter
+		    end)
+	
+		    if s then
+		    	frame.Active = true;
+	
+		    	event:connect(function()
+		    		local input = frame.InputBegan:connect(function(key)
+		    			if key.UserInputType == Enum.UserInputType.MouseButton1 then
+		    				local objectPosition = Vector2.new(mouse.X - frame.AbsolutePosition.X, mouse.Y - frame.AbsolutePosition.Y);
+		    				while heartbeat:wait() and inputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton1) do
+		    					frame:TweenPosition(UDim2.new(0, mouse.X - objectPosition.X + (frame.Size.X.Offset * frame.AnchorPoint.X), 0, mouse.Y - objectPosition.Y + (frame.Size.Y.Offset * frame.AnchorPoint.Y)), 'Out', 'Quad', 0.1, true);
+		    				end
+		    			end
+		    		end)
+	
+		    		local leave;
+		    		leave = frame.MouseLeave:connect(function()
+		    			input:disconnect();
+		    			leave:disconnect();
+		    		end)
+		    	end)
+		    end
+		end
+		
+		function resizer.new(p, s)
+			p:GetPropertyChangedSignal('AbsoluteSize'):connect(function()
+				s.Size = UDim2.new(s.Size.X.Scale, s.Size.X.Offset, s.Size.Y.Scale, p.AbsoluteSize.Y);
+			end)
+		end
+	end
+	script.Parent.Active = true
+	script.Parent.Draggable = true
+end
+coroutine.wrap(FGRQUCE_fake_script)()
