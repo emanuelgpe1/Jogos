@@ -34,11 +34,11 @@ local function findPlr(name)
     local Tab2Section = Tab2:NewSection("Teleport")
 
     Tab2Section:NewButton("Fire azul", "TP Fire azul", function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0,0,0)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-527, 16, 783)
     end)
 
     Tab2Section:NewButton("Safe", "Tp para SafeZone", function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(100,100,100)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(76, 3, 454)
     end)
     
 --------------------------------------player------------------------------
