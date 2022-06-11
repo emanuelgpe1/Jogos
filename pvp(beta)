@@ -68,7 +68,7 @@ local Tab2Section = Tab3:NewSection("Player")
 
 --------------------------------------PVP------------------------------
 
-    local Tab1Section = Tab1:NewSection("God (nao saira pra versao final)")
+    local Tab1Section = Tab1:NewSection("God (Pfv nao abuse)")
     
     Tab1Section:NewButton("god", "ButtonInfo", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/ag66DdEY"))();
