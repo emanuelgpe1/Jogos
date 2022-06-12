@@ -2221,7 +2221,7 @@ function doEgg()
             while getgenv().Egg == true do	
 local Event = game:GetService("ReplicatedStorage").EggEvent
 Event:FireServer()
-                wait(0.2)
+                wait(0.01)
             
         end
     end)
@@ -2232,7 +2232,7 @@ function doEgg1()
             while getgenv().Egg1 == true do	
 local Event = game:GetService("ReplicatedStorage").EggEvent
 Event:FireServer()
-                wait(0.3)
+                wait(0.02)
             
         end
     end)
