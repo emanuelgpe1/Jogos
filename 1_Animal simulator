@@ -1916,13 +1916,6 @@ Tabes4:Toggle("Auto reset ( 10 minutos)", function(bool)
   end
 end)
 
-Tabes4:Toggle("Auto reset (13 minutos)", function(bool)
-    getgenv().Re5 = bool
-    print('', bool);
-   if bool then
-   doRe5();
-  end
-end)
 
 Tabes4:Toggle("Auto reset (30 minutos)", function(bool)
     getgenv().Re6 = bool
@@ -1952,13 +1945,6 @@ Tabes4:Toggle("Auto FPS_boost (15 minutos)", function(bool)
   end
 end)
 
-Tabes4:Toggle("Auto FPS_boost (20 minutos)", function(bool)
-    getgenv().lag3 = bool
-    print('', bool);
-   if bool then
-   dolag3();
-  end
-end)
 
 Tabes4:Toggle("Auto FPS_boost (30 minutos)", function(bool)
     getgenv().lag4 = bool
@@ -2115,15 +2101,7 @@ game.Players.LocalPlayer.Character.Humanoid.Health = 0
     end)
 end
 
- function doRe2()
-    spawn(function()
-            while getgenv().Re2 == true do	
-game.Players.LocalPlayer.Character.Humanoid.Health = 0 
-                wait(200)
-            
-        end
-    end)
-end
+
 
 function doRe3()
     spawn(function()
@@ -2140,16 +2118,6 @@ function doRe4()
             while getgenv().Re4 == true do	
 game.Players.LocalPlayer.Character.Humanoid.Health = 0 
                 wait(600)
-            
-        end
-    end)
-end
-
-function doRe5()
-    spawn(function()
-            while getgenv().Re5 == true do	
-game.Players.LocalPlayer.Character.Humanoid.Health = 0 
-                wait(800)
             
         end
     end)
@@ -2186,16 +2154,6 @@ spawn(function()
 end)
 end
 
-function dolag3()
-spawn(function()
-        while getgenv().lag3 == true do	
-            loadstring(game:HttpGet("https://pastebin.com/raw/6vs69JUg"))()
-            wait(1200)
-        
-    end
-end)
-end
-
 function dolag4()
 spawn(function()
         while getgenv().lag4 == true do	
@@ -2221,7 +2179,7 @@ function doEgg()
             while getgenv().Egg == true do	
 local Event = game:GetService("ReplicatedStorage").EggEvent
 Event:FireServer()
-                wait(0.01)
+                wait(0.3)
             
         end
     end)
@@ -2232,7 +2190,7 @@ function doEgg1()
             while getgenv().Egg1 == true do	
 local Event = game:GetService("ReplicatedStorage").EggEvent
 Event:FireServer()
-                wait(0.02)
+                wait(0.2)
             
         end
     end)
