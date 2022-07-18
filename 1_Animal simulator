@@ -1955,7 +1955,7 @@ Tabes4:Toggle("Auto FPS_boost (30 minutos)", function(bool)
 end)
 
 ------------------------------o-------------
-Tabes1:Label("Premium")
+Tabes1:Label("Free")
 
 Tabes1:Line()
 
