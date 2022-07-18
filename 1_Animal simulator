@@ -26,7 +26,7 @@ local thumbSize = Enum.ThumbnailSize.Size420x420
 local content, isReady = Players:GetUserThumbnailAsync(userId, thumbType, thumbSize)
 game:GetService("StarterGui"):SetCore("SendNotification",{  
 Title = "PETITE HUB",     
-Text = "Bem Vindo(a)                                      Criador: Petiteᴱᴮ#6547",
+Text = "Bem Vindo(a)                                      Criador: Petite#3760",
 Icon = "rbxassetid://8666601749",
 Duration = 10,
 Color = Success
