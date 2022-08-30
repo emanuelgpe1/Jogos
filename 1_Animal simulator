@@ -27,7 +27,7 @@ local content, isReady = Players:GetUserThumbnailAsync(userId, thumbType, thumbS
 game:GetService("StarterGui"):SetCore("SendNotification",{  
 Title = "PETITE HUB",     
 Text = "Bem Vindo(a)                                      Criador: Petite#3760",
-Icon = "rbxassetid://8666601749",
+Icon = "rbxassetid://9414265117",
 Duration = 10,
 Color = Success
 })
@@ -1875,87 +1875,15 @@ _G.SectionOn = Color3.fromRGB(0, 250, 0)
 -- Window --
 local Win = Blacklib:Window("PETITE HUB")
 -- Tab -- 
-local Tabes4 = Win:Tab("• Re/Ant lag ✔", img)
-local Tabes1 = Win:Tab("• Egg farm❤️", img)
-local Tabes = Win:Tab("• Farm 👌🏼", img)
+local Tabes1 = Win:Tab("• 1 farm", img)
+local Tabes = Win:Tab("• 2 Farm", img)
 local Tabes2 = Win:Tab("• Combate☠️", img)
 local Tabes3 = Win:Tab("• Outros⚠️", img)
 
-Tabes4:Label("Auto re")
-Tabes4:Line()
 
-Tabes4:Toggle("Auto reset (30 segundos)", function(bool)
-    getgenv().Re = bool
-    print('', bool);
-   if bool then
-   doRe();
-  end
-end)
-
-Tabes4:Toggle("Auto reset (3 minutos)", function(bool)
-    getgenv().Re2 = bool
-    print('', bool);
-   if bool then
-   doRe2();
-  end
-end)
-
-Tabes4:Toggle("Auto reset (5 minutos)", function(bool)
-    getgenv().Re3 = bool
-    print('', bool);
-   if bool then
-   doRe3();
-  end
-end)
-
-Tabes4:Toggle("Auto reset ( 10 minutos)", function(bool)
-    getgenv().Re4 = bool
-    print('', bool);
-   if bool then
-   doRe4();
-  end
-end)
-
-
-Tabes4:Toggle("Auto reset (30 minutos)", function(bool)
-    getgenv().Re6 = bool
-    print('', bool);
-   if bool then
-   doRe6();
-  end
-end)
-Tabes4:Line()
-
-Tabes4:Label("FPS_Boost")
-Tabes4:Line()
-
-Tabes4:Toggle("Auto FPS_boost (5 minutos)", function(bool)
-    getgenv().lag1 = bool
-    print('', bool);
-   if bool then
-   dolag1();
-  end
-end)
-
-Tabes4:Toggle("Auto FPS_boost (15 minutos)", function(bool)
-    getgenv().lag2 = bool
-    print('', bool);
-   if bool then
-   dolag2();
-  end
-end)
-
-
-Tabes4:Toggle("Auto FPS_boost (30 minutos)", function(bool)
-    getgenv().lag4 = bool
-    print('', bool);
-   if bool then
-   dolag4();
-  end
-end)
 
 ------------------------------o-------------
-Tabes1:Label("Free")
+Tabes1:Label("Premium")
 
 Tabes1:Line()
 
@@ -1967,11 +1895,11 @@ Tabes1:Line()
   end
 end)
 
- Tabes1:Toggle("Egg (- rapido)", function(bool)
-    getgenv().Egg1 = bool
+ Tabes1:Toggle("Egg/Chest", function(bool)
+    getgenv().eggchest = bool
     print('', bool);
    if bool then
-   doEgg1();
+   doeggchest();
   end
 end)
 
@@ -2091,77 +2019,16 @@ end)
 
 
 ----------------------------------------------------------------------------------------------------------------------------
-function doRe()
+function eggchest()
     spawn(function()
-            while getgenv().Re == true do	
-game.Players.LocalPlayer.Character.Humanoid.Health = 0 
-                wait(30)
-            
+            while getgenv().eggchest == true do	
+                game:GetService("ReplicatedStorage").TreasureEvent:FireServer(workspace.Treasures.Treasure5)
+                wait()
+                local Event = game:GetService("ReplicatedStorage").EggEvent
+                Event:FireServer()
+             wait()
         end
     end)
-end
-
-
-
-function doRe3()
-    spawn(function()
-            while getgenv().Re3 == true do	
-game.Players.LocalPlayer.Character.Humanoid.Health = 0 
-                wait(300)
-            
-        end
-    end)
-end
-
-function doRe4()
-    spawn(function()
-            while getgenv().Re4 == true do	
-game.Players.LocalPlayer.Character.Humanoid.Health = 0 
-                wait(600)
-            
-        end
-    end)
-end
-
-function doRe6()
-    spawn(function()
-            while getgenv().Re6 == true do	
-game.Players.LocalPlayer.Character.Humanoid.Health = 0 
-                wait(1800)
-            
-        end
-    end)
-end
-------------------------------ANT LAG---------------
-
-function dolag1()
-spawn(function()
-        while getgenv().lag1 == true do	
-            loadstring(game:HttpGet("https://pastebin.com/raw/6vs69JUg"))()
-            wait(300)
-        
-    end
-end)
-end
-
-function dolag2()
-spawn(function()
-        while getgenv().lag2 == true do	
-            loadstring(game:HttpGet("https://pastebin.com/raw/6vs69JUg"))()
-            wait(900)
-        
-    end
-end)
-end
-
-function dolag4()
-spawn(function()
-        while getgenv().lag4 == true do	
-            loadstring(game:HttpGet("https://pastebin.com/raw/6vs69JUg"))()
-            wait(1800)
-        
-    end
-end)
 end
 ----------------------------chest-------------------
 function doTap()
@@ -2174,29 +2041,19 @@ function doTap()
     end)
 end
 --------------------------egg---------
-function doEgg()
-    spawn(function()
-            while getgenv().Egg == true do	
-local Event = game:GetService("ReplicatedStorage").EggEvent
-Event:FireServer()
-                wait(0.3)
-            
-        end
-    end)
-end
 
 function doEgg1()
     spawn(function()
             while getgenv().Egg1 == true do	
 local Event = game:GetService("ReplicatedStorage").EggEvent
 Event:FireServer()
-                wait(0.2)
+                wait(0.01)
             
         end
     end)
 end
 
-
+------------------------------dummy--------
 
 function doDumm()
  spawn(function()
