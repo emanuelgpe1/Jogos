@@ -1,4 +1,4 @@
-getgenv().chest = false; --chest
+getgenv().coin = false; --coin
 getgenv().Ree = false --Auto re
 getgenv().Ree2 = false --Auto re2
 getgenv().ara6 = false; --dummy
@@ -2018,8 +2018,8 @@ function doCn()
         end
     end)
 end
-----------------------------chest-------------------[[
-function doTap()
+----------------------------chest-------------------
+--[[function doTap()
     spawn(function()
             while getgenv().chest == true do	
                 game:GetService("ReplicatedStorage").TreasureEvent:FireServer(workspace.Treasures.Treasure5)
