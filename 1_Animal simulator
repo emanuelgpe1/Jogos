@@ -1,6 +1,4 @@
 getgenv().chest = false; --chest
-getgenv().Egg1 = false; --egg
-getgenv().Egg = false; --egg rapido
 getgenv().Ree = false --Auto re
 getgenv().Ree2 = false --Auto re2
 getgenv().ara6 = false; --dummy
@@ -1879,43 +1877,36 @@ local Tabes1 = Win:Tab("• 1 farm", img)
 local Tabes = Win:Tab("• 2 Farm", img)
 local Tabes2 = Win:Tab("• Combate☠️", img)
 local Tabes3 = Win:Tab("• Outros⚠️", img)
+local Tabes4 = Win:Tab("• update_04/12", img)
 
 
 
-------------------------------o-------------
-Tabes1:Label("Premium")
+--------------------------------------------
+Tabes1:Label("facil farm")
 
 Tabes1:Line()
 
- Tabes1:Toggle("Egg (+ rapido)", function(bool)
-    getgenv().Egg = bool
+ Tabes1:Toggle("coin farm)", function(bool)
+    getgenv().coin = bool
     print('', bool);
    if bool then
-   doEgg();
+   doCn();
   end
 end)
-
- Tabes1:Toggle("Egg/Chest", function(bool)
-    getgenv().eggchest = bool
-    print('', bool);
-   if bool then
-   doeggchest();
-  end
-end)
-
-
-
-Tabes:Label("Normal farm")
-
-Tabes:Line()
-
-Tabes:Toggle("Chest", function(bool)
+--[[
+Tabes1:Toggle("Chest", function(bool)
     getgenv().chest = bool
     print('', bool);
    if bool then
    doTap();
   end
 end)
+]]
+-------------------------------------------------
+
+Tabes:Label("Normal farm")
+
+Tabes:Line()
 
 --------------------------------------------------------dummy-------------------------------
 Tabes:Line()
@@ -2019,18 +2010,15 @@ end)
 
 
 ----------------------------------------------------------------------------------------------------------------------------
-function eggchest()
+function doCn()
     spawn(function()
-            while getgenv().eggchest == true do	
-                game:GetService("ReplicatedStorage").TreasureEvent:FireServer(workspace.Treasures.Treasure5)
-                wait()
-                local Event = game:GetService("ReplicatedStorage").EggEvent
-                Event:FireServer()
+            while getgenv().coin == true do
+            game:GetService("ReplicatedStorage").Events.CoinEvent:FireServer()
              wait()
         end
     end)
 end
-----------------------------chest-------------------
+----------------------------chest-------------------[[
 function doTap()
     spawn(function()
             while getgenv().chest == true do	
@@ -2040,19 +2028,7 @@ function doTap()
         end
     end)
 end
---------------------------egg---------
-
-function doEgg1()
-    spawn(function()
-            while getgenv().Egg1 == true do	
-local Event = game:GetService("ReplicatedStorage").EggEvent
-Event:FireServer()
-                wait(0.01)
-            
-        end
-    end)
-end
-
+]]
 ------------------------------dummy--------
 
 function doDumm()
