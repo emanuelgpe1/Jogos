@@ -1,12 +1,4 @@
 getgenv().coin = false; --coin
-getgenv().Ree = false --Auto re
-getgenv().Ree2 = false --Auto re2
-getgenv().ara6 = false; --dummy
-getgenv().ara7 = false; --dummy2
-getgenv().Zombi = false; --boss
-getgenv().fire2 = false; --fire dummy 5k
-getgenv().fire = false; --fire dummy
-getgenv().Join = false; -- join
 getgenv().Kill = false; --kill aura
 getgenv().Ez = false; -- spam 1
 getgenv().rdw = false; -- spam 2
@@ -1873,15 +1865,17 @@ _G.SectionOn = Color3.fromRGB(0, 250, 0)
 -- Window --
 local Win = Blacklib:Window("PETITE HUB")
 -- Tab -- 
-local Tabes1 = Win:Tab("• 1 farm", img)
-local Tabes = Win:Tab("• 2 Farm", img)
+local Tabes1 = Win:Tab("• farm (on)", img)
 local Tabes2 = Win:Tab("• Combate☠️", img)
 local Tabes3 = Win:Tab("• Outros⚠️", img)
-local Tabes4 = Win:Tab("• update_04/12", img)
+local Tabes4 = Win:Tab("• update", img)
 
 
+---------------------------------------------------------update--------------------
+Tabes4:Label("-farm em breve... (04/12/2022)")
+Tabes4:Label("+Coin farm (04/12/2022)")
 
---------------------------------------------
+--------------------------------------------coin----------------------------------
 Tabes1:Label("facil farm")
 
 Tabes1:Line()
@@ -1893,86 +1887,8 @@ Tabes1:Line()
    doCn();
   end
 end)
---[[
-Tabes1:Toggle("Chest", function(bool)
-    getgenv().chest = bool
-    print('', bool);
-   if bool then
-   doTap();
-  end
-end)
-]]
--------------------------------------------------
 
-Tabes:Label("Normal farm")
-
-Tabes:Line()
-
---------------------------------------------------------dummy-------------------------------
-Tabes:Line()
-
-  Tabes:Label("")
-
-Tabes:Toggle("Dummy 5k", function(bool)
-    getgenv().ara7 = bool
-    print('fire farm is', bool);
-   if bool then
-   doDumm();
-  end
-end)
-
-Tabes:Button("tirar bug de parado", function()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
-end)
-
-Tabes:Toggle("Dummy", function(bool)
-    getgenv().ara6 = bool
-game:GetService("StarterGui"):SetCore("SendNotification",{  
-Title = "!!Aviso!!",     
-Text = "Use o coamndo (noclip) no infinity yield para uma melhor segunça para o farm",
-Icon = "rbxassetid://8666601749",
-Duration = 3,
-Color = Success
-})
-    if bool then
-    doDummy();
-    end
-end)
-
-Tabes:Label("")
-Tabes:Line()
-
-Tabes:Button("Fire farm", function()
-    Blacklib:Notification("Equip a fire para farmar")
-end)
-Tabes:Toggle("fire farm (dummy 5k)", function(bool)
-    getgenv().fire2 = bool
-   print('', bool);
-   if bool then
-    doFire2();
-  end
-end)
-
-Tabes:Toggle("fire farm (dummy)", function(bool)
-    getgenv().fire = bool
-print('', bool);
-if bool then
-doFire();
-end
-end)
-
-Tabes:Label("")
-Tabes:Line()
-
-Tabes:Toggle("Zombie", function(bool)
-    getgenv().Zombi = bool
-    print('', bool);
-   if bool then
-   doBoss();
-  end
-end)
----------------------------------------------------------------------------------------------
-
+-----------------------------------------------------combate-------------------------------------
 Tabes2:Toggle("Kill Aura", function(bool)
     getgenv().Kill = bool
     print('fire farm is', bool);
@@ -2019,108 +1935,10 @@ function doCn()
     end)
 end
 ----------------------------chest-------------------
---[[function doTap()
-    spawn(function()
-            while getgenv().chest == true do	
-                game:GetService("ReplicatedStorage").TreasureEvent:FireServer(workspace.Treasures.Treasure5)
-                wait()
-            
-        end
-    end)
-end
-]]
+
 ------------------------------dummy--------
 
-function doDumm()
- spawn(function()
-    
-      while getgenv().ara7 == true do	
-   
-  local args = {
-   [1] = workspace.OLDMAP.pleaseno.Dummy2.Humanoid,
-   [2] = 3
-  }
-game:GetService("ReplicatedStorage").jdskhfsIIIllliiIIIdchgdIiIIIlIlIli:FireServer(unpack(args))
-  
-local args = {
-[1] = "\n.\n\n"
-}
-
-game:GetService("Players").LocalPlayer.PlayerGui.TeamGUI.noTeamFrame.teamInfo.createBtn.createTeamEvent:FireServer(unpack(args))
- wait()
- local args = {
-[1] = "\n.\n\n"
-  }
-game:GetService("ReplicatedStorage").acceptedEvent:FireServer(unpack(args))
-  
-   game.Workspace.OLDMAP.barn["circle_table"].MeshPart.CFrame = CFrame.new(0.47172159, -33.4159966, 783.801636, 0.608674526, -7.85272292e-08, 0.793420017, 6.54785168e-08, 1, 4.87410468e-08, -0.793420017, 2.22845316e-08, 0.608674526) game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-0.905763149, -30.203537, 783.954163, 0.608674526, -8.35808152e-08, 0.793420017, 7.72934854e-08, 1, 4.60465337e-08, -0.793420017, 3.32988463e-08, 0.608674526)
-                 
-   wait()
-     end
-    end)
-  end
-
-  function doDummy()
-    spawn(function()
-      while getgenv().ara6 == true do		
-      local args = {
-         [1] = workspace.OLDMAP.pleaseno:FindFirstChild("Training Dummy").Humanoid,
-         [2] = 4
-  }
-   
-      game:GetService("ReplicatedStorage").jdskhfsIIIllliiIIIdchgdIiIIIlIlIli:FireServer(unpack(args))
-      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(20.7325745, -5.85327721, 462.997589, -0.995387912, 0.00179957179, -0.0959149599, -8.59843485e-09, 0.999824047, 0.018758947, 0.0959318429, 0.0186724309, -0.995212734)
-       wait()
-      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(13.7325745, -5.85327721, 462.997589, -0.995387912, 0.00179957179, -0.0959149599, -8.59843485e-09, 0.999824047, 0.018758947, 0.0959318429, 0.0186724309, -0.995212734)
-       wait(0.2)
-      game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
-       wait()
-     end
-    end)
-  end
-------------------------fire-----------------
-  function doFire2()
-    spawn(function()
-      while getgenv().fire2  == true do	
-  local args = {
-  [1] = Vector3.new(3.3615944385528564, -19.172481536865234, 784.7688598632812)
-  }
-   
-  game:GetService("Players").LocalPlayer.Character.Fireball.FireballEvent:FireServer(unpack(args))
-     wait()
-     end
-    end)
-  end
-
-
-  function doFire()
-    spawn(function()
-      while getgenv().fire  == true do	
-  local args = {
-  [1] = Vector3.new(12.9497, 3.10262, 464.26)
-  }
-   
-  game:GetService("Players").LocalPlayer.Character.Fireball.FireballEvent:FireServer(unpack(args))
-     wait()
-     end
-    end)
-  end
--------------------------------------------boss---------------------------------------------------
-function doBoss()
-    spawn(function()
-      while getgenv().Zombi  == true do	
-  local args = {
-                      [1] = workspace.NPC.Zombie.Humanoid,
-                      [2] = 32
-                  }
-   
-                  game:GetService("ReplicatedStorage").jdskhfsIIIllliiIIIdchgdIiIIIlIlIli:FireServer(unpack(args))
-                  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1.74471986, 15.7002001, -206.118668, -0.661939323, -0.0140629234, -0.749425471, -9.1562713e-09, 0.999823987, -0.0187616274, 0.749557436, -0.0124190524, -0.661822796)
-    wait()
-     end
-    end)
-  end
-------------------------------------spam------------------------------------------------
+f
 function doEz()
     spawn(function()
       while getgenv().Ez == true do
