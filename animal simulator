@@ -1938,7 +1938,6 @@ end
 
 ------------------------------dummy--------
 
-f
 function doEz()
     spawn(function()
       while getgenv().Ez == true do
