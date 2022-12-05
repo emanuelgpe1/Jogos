@@ -1891,7 +1891,7 @@ Tabes1:Line()
   end
 end)
 
-Tabes1:Toggle("Dummy farm (off))", function(bool)
+Tabes1:Toggle("Dummy farm", function(bool)
     getgenv().dy = bool
     print('', bool);
    if bool then
@@ -1966,6 +1966,8 @@ local args = {
 
 game:GetService("ReplicatedStorage").jdskhfsIIIllliiIIIdchgdIiIIIlIlIli:FireServer(unpack(args)) 
 
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new()
+ 
              wait()
         end
     end)
@@ -1983,6 +1985,8 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").jdskhfsIIIllliiIIIdchgdIiIIIlIlIli:FireServer(unpack(args))
+
+ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1072.07751, -169.697647, 26.1673107, -0.952814519, 0.162261337, -0.256545871, -5.06783593e-09, 0.84514308, 0.534540117, 0.303553164, 0.509317577, -0.805264592)
 
              wait()
         end
