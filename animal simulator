@@ -1,4 +1,5 @@
-
+getgenv().dy2 = false; --dummy5k e fire
+getgenv().dy = false; --dummy e fire
 getgenv().coin = false; --coin
 getgenv().Kill = false; --kill aura
 getgenv().Ez = false; -- spam 1
@@ -1873,6 +1874,7 @@ local Tabes4 = Win:Tab("• update", img)
 
 
 ---------------------------------------------------------update--------------------
+Tabes4:Label("+Dummy farm (05/12/2022)")
 Tabes4:Label("-farm em breve... (04/12/2022)")
 Tabes4:Label("+Coin farm (04/12/2022)")
 
@@ -1886,6 +1888,22 @@ Tabes1:Line()
     print('', bool);
    if bool then
    doCn();
+  end
+end)
+
+Tabes1:Toggle("Dummy farm (off))", function(bool)
+    getgenv().dy = bool
+    print('', bool);
+   if bool then
+   doDF();
+  end
+end)
+
+Tabes1:Toggle("Dummy Cave farm", function(bool)
+    getgenv().dy2 = bool
+    print('', bool);
+   if bool then
+   doDF2();
   end
 end)
 
@@ -1937,7 +1955,41 @@ function doCn()
 end
 
 ------------------------------dummy--------
+function doDF()
+    spawn(function()
+            while getgenv().dy == true do
 
+local args = {
+    [1] = workspace.MAP.dummies:FindFirstChild("Training Dummy").Humanoid,
+    [2] = 2
+}
+
+game:GetService("ReplicatedStorage").jdskhfsIIIllliiIIIdchgdIiIIIlIlIli:FireServer(unpack(args)) 
+
+             wait()
+        end
+    end)
+end
+
+---------------------------------------------dummy5k---------------
+
+function doDF2()
+    spawn(function()
+            while getgenv().dy2 == true do
+            
+local args = {
+    [1] = workspace.MAP.waterfall1.Dummy2.Humanoid,
+    [2] = 7
+}
+
+game:GetService("ReplicatedStorage").jdskhfsIIIllliiIIIdchgdIiIIIlIlIli:FireServer(unpack(args))
+
+             wait()
+        end
+    end)
+end
+
+----------------------------------------------------------------------------
 function doEz()
     spawn(function()
       while getgenv().Ez == true do
