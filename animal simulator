@@ -1899,7 +1899,7 @@ Tabes1:Toggle("Dummy farm", function(bool)
   end
 end)
 
-Tabes1:Toggle("Dummy Cave farm", function(bool)
+Tabes1:Toggle("Dummy Cave farm (off)", function(bool)
     getgenv().dy2 = bool
     print('', bool);
    if bool then
@@ -1966,7 +1966,7 @@ local args = {
 
 game:GetService("ReplicatedStorage").jdskhfsIIIllliiIIIdchgdIiIIIlIlIli:FireServer(unpack(args)) 
 
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(82.6349106, -89.5828552, -79.9172363, -0.970527112, -6.81031409e-08, 0.24099198, -6.50738698e-08, 1, 2.05284199e-08, -0.24099198, 4.24110613e-09, -0.970527112)
  
              wait()
         end
@@ -1986,9 +1986,14 @@ local args = {
 
 game:GetService("ReplicatedStorage").jdskhfsIIIllliiIIIdchgdIiIIIlIlIli:FireServer(unpack(args))
 
- game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1072.07751, -169.697647, 26.1673107, -0.952814519, 0.162261337, -0.256545871, -5.06783593e-09, 0.84514308, 0.534540117, 0.303553164, 0.509317577, -0.805264592)
-
+--[[ dummy do canto ]]
+ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1093.59192, -165.049057, 19.5205059, -0.865952671, -0.0208507068, -0.499691099, -8.21541946e-09, 0.999130547, -0.0416908972, 0.500125945, -0.0361023396, -0.865199804)
+ game.Workspace.MAP.barn.circle_table.MeshPart.CFrame = CFrame.new(1093.55298, -165.924454, 21.311367, -0.949979603, -0.0731985718, -0.303612769, -7.77089859e-09, 0.972145915, -0.234376445, 0.312311918, -0.222652853, -0.923518777)
              wait()
+--[[ dummy do meio ]]
+ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1072.72363, -164.640732, 26.2594013, -0.970280528, -0.0630192608, -0.233632743, 1.2738373e-08, 0.965493083, -0.260428697, 0.241982818, -0.252688885, -0.936799169)
+ game.Workspace.MAP.barn.circle_table.MeshPart.CFrame = CFrame.new(1071.80103, -169.939316, 25.3986797, 0.1080264, 0.0186299067, -0.993973434, 9.09398423e-09, 0.999824405, 0.0187395718, 0.994148016, -0.00202437746, 0.108007431)
+ wait()
         end
     end)
 end
