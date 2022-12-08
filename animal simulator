@@ -1,5 +1,6 @@
-getgenv().dy2 = false; --dummy5k e fire
-getgenv().dy = false; --dummy e fire
+getgenv().dy2 = false; --dummy5k
+getgenv().dya = false; --dummy
+getgenv().dyb = false; --dummy
 getgenv().coin = false; --coin
 getgenv().Kill = false; --kill aura
 getgenv().Ez = false; -- spam 1
@@ -1890,14 +1891,29 @@ Tabes1:Line()
    doCn();
   end
 end)
+Tabes1:Line()
 
-Tabes1:Toggle("Dummy farm", function(bool)
-    getgenv().dy = bool
+Tabes1:Label("Caso o 1 n funcionar use o (Dummy farm 2")
+
+Tabes1:Line()
+
+Tabes1:Toggle("Dummy farm 1 ", function(bool)
+    getgenv().dya = bool
     print('', bool);
    if bool then
-   doDF();
+doDF_a();
   end
 end)
+
+Tabes1:Toggle("Dummy farm 2", function(bool)
+    getgenv().dyb = bool
+    print('', bool);
+   if bool then
+   doDF_b();
+  end
+end)
+
+Tabes1:Line()
 
 Tabes1:Toggle("Dummy Cave farm (off)", function(bool)
     getgenv().dy2 = bool
@@ -1955,9 +1971,9 @@ function doCn()
 end
 
 ------------------------------dummy--------
-function doDF()
+function doDF_a() --Canto em cima
     spawn(function()
-            while getgenv().dy == true do
+            while getgenv().dya == true do
 
 local args = {
     [1] = workspace.MAP.dummies:FindFirstChild("Training Dummy").Humanoid,
@@ -1973,12 +1989,28 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(82.63491
     end)
 end
 
+function doDF_b() --canto em baixo
+    spawn(function()
+            while getgenv().dyb == true do
+
+local args = {
+    [1] = workspace.MAP.dummies:FindFirstChild("Training Dummy").Humanoid,
+    [2] = 2
+}
+
+game:GetService("ReplicatedStorage").jdskhfsIIIllliiIIIdchgdIiIIIlIlIli:FireServer(unpack(args)) 
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(48.4531593, -89.9206238, -52.2916718, -0.995899439, 5.04113409e-08, 0.0904669538, 5.2771874e-08, 1, 2.37008297e-08, -0.0904669538, 2.83777535e-08, -0.995899439) 
+            wait()
+        end
+    end)
+end
 ---------------------------------------------dummy5k---------------
 
 function doDF2()
     spawn(function()
             while getgenv().dy2 == true do
-            
+          
 local args = {
     [1] = workspace.MAP.waterfall1.Dummy2.Humanoid,
     [2] = 7
@@ -1988,11 +2020,8 @@ game:GetService("ReplicatedStorage").jdskhfsIIIllliiIIIdchgdIiIIIlIlIli:FireServ
 
 --[[ dummy do canto ]]
  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1093.59192, -165.049057, 19.5205059, -0.865952671, -0.0208507068, -0.499691099, -8.21541946e-09, 0.999130547, -0.0416908972, 0.500125945, -0.0361023396, -0.865199804)
- game.Workspace.MAP.barn.circle_table.MeshPart.CFrame = CFrame.new(1093.55298, -165.924454, 21.311367, -0.949979603, -0.0731985718, -0.303612769, -7.77089859e-09, 0.972145915, -0.234376445, 0.312311918, -0.222652853, -0.923518777)
+game:GetService("Workspace").plot:GetChildren()[3]["Meshes/PolygonDungeon_Environments_01_SM_Env_Rock_Flat_01"].CFrame = CFrame.new(1073.59839, -169.161713, 26.5116978, 0.492429793, 0.05819989, -0.86840409, 1.07656835e-08, 0.997761726, 0.0668693632, 0.870352149, -0.032928478, 0.491327614)
              wait()
---[[ dummy do meio ]]
- game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1072.72363, -164.640732, 26.2594013, -0.970280528, -0.0630192608, -0.233632743, 1.2738373e-08, 0.965493083, -0.260428697, 0.241982818, -0.252688885, -0.936799169)
- game.Workspace.MAP.barn.circle_table.MeshPart.CFrame = CFrame.new(1071.80103, -169.939316, 25.3986797, 0.1080264, 0.0186299067, -0.993973434, 9.09398423e-09, 0.999824405, 0.0187395718, 0.994148016, -0.00202437746, 0.108007431)
  wait()
         end
     end)
