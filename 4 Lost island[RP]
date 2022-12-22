@@ -1,1 +1,76 @@
-print("O")
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Lost Island[RP]", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+-- values
+_G.chest = true
+_G.Kill = true
+
+-- functions
+
+function chest()
+ while _G.chest == true do
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/emanuelgpe1/a/main/TP%20gui", true))()
+ end
+end
+
+
+  function kill()
+    spawn(function()
+      while _G.Kill  == true do
+   for i,v in pairs(game.Players:GetChildren()) do
+                          for i,p in pairs(game.Workspace:GetChildren()) do
+                          if p.Name == v.Name and p.Name ~= game.Players.LocalPlayer.Name then
+game:GetService("ReplicatedStorage").Events.TakeDamage:FireServer(p.Humanoid,1)
+                          end
+                          end
+                         end   	
+     wait()
+     end
+    end)
+  end
+
+local Tab1 = Window:MakeTab({
+	Name = "Auto farm",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+local Tab2 = Window:MakeTab({
+	Name = "Combat",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+OrionLib:MakeNotification({
+	Name = "Petite Hub!",
+	Content = "Petite#3760",
+	Image = "rbxassetid://4483345998",
+	Time = 20
+})
+
+
+Tab1:AddButton({
+	Name = "Stop farm Emergence",
+	Callback = function()
+      		_G.chest = false
+  	end    
+})
+
+Tab1:AddToggle({
+	Name = "Chest",
+	Default = false,
+	Callback = function(Value)
+     _G.chest = Value
+       chest()
+	end    
+})
+
+Tab2:AddToggle({
+	Name = "Kill aura (Medium ban risk)",
+	Default = false,
+	Callback = function(Value)
+     _G.kill = Value
+       kill()
+	end    
+})
+-- Dropdown:Refresh(List<table>,true)
+--Dropdown:Set("dropdown option")
+OrionLib:Init()
