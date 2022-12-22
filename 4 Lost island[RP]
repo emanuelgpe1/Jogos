@@ -1,7 +1,5 @@
-getgenv().dy2 = false; --dummy5k
-getgenv().dya = false; --dummy
-getgenv().dyb = false; --dummy
-getgenv().coin = false; --coin
+getgenv().Chest = false; --Tp
+
 getgenv().Kill = false; --kill aura
 getgenv().Ez = false; -- spam 1
 getgenv().rdw = false; -- spam 2
