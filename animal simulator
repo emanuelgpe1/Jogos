@@ -1943,8 +1943,11 @@ Tabes2:Toggle("Spam (Aleatorio)", function(bool)
 end)
 
 
+Tabes3:Note("------------------------------(Guis)------------------------------------")
+Tabes3:Button("Fps GUi", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/uXA9zP76'))()
+end)
 Tabes3:Note("------------------------------(Outros)------------------------------------")
-
 Tabes3:Button("Infiti yield", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
