@@ -1,6 +1,5 @@
-getgenv().dy2 = false; --dummy5k
-getgenv().dya = false; --dummy
-getgenv().dyb = false; --dummy
+getgenv().dy5k = false; --dummy5k
+getgenv().dy = false; --dummy
 getgenv().coin = false; --coin
 getgenv().Kill = false; --kill aura
 getgenv().Ez = false; -- spam 1
@@ -1875,53 +1874,48 @@ local Tabes4 = Win:Tab("• update", img)
 
 
 ---------------------------------------------------------update--------------------
-Tabes4:Label("+Dummy farm (05/12/2022)")
-Tabes4:Label("-farm em breve... (04/12/2022)")
-Tabes4:Label("+Coin farm (04/12/2022)")
-
+Tabes4:Note("+Dummy cave farm (24/12/2022)")
+Tabes4:Note("")
+Tabes4:Note("+Dummy farm (05/12/2022)")
+Tabes4:Note("")
+Tabes4:Note("+Coin farm (04/12/2022)")
 --------------------------------------------coin----------------------------------
-Tabes1:Label("facil farm")
+Tabes1:Line()
+
+Tabes1:Label("Level farm")
 
 Tabes1:Line()
 
- Tabes1:Toggle("coin farm)", function(bool)
+Tabes1:Toggle("Dummy farm", function(bool)
+    getgenv().dy = bool
+    print('', bool);
+   if bool then
+   doDF();
+  end
+end)
+
+
+Tabes1:Toggle("Dummy Cave farm (5k)", function(bool)
+    getgenv().dy5k = bool
+    print('', bool);
+   if bool then
+   doDF5k();
+  end
+end)
+
+Tabes1:Line()
+
+Tabes1:Label("Others farm")
+
+ Tabes1:Toggle("coin farm", function(bool)
     getgenv().coin = bool
     print('', bool);
    if bool then
    doCn();
   end
 end)
-Tabes1:Line()
-
-Tabes1:Label("Caso o 1 n funcionar use o (Dummy farm 2")
 
 Tabes1:Line()
-
-Tabes1:Toggle("Dummy farm 1 ", function(bool)
-    getgenv().dya = bool
-    print('', bool);
-   if bool then
-doDF_a();
-  end
-end)
-
-Tabes1:Toggle("Dummy farm 2", function(bool)
-    getgenv().dyb = bool
-    print('', bool);
-   if bool then
-   doDF_b();
-  end
-end)
-
-Tabes1:Line()
-
-Tabes1:Toggle("Dummy Cave farm (off)", function(bool)
-    getgenv().dy2 = bool
-    print('', bool);
-   if bool then
-   doDF2();
-  end
-end)
 
 -----------------------------------------------------combate-------------------------------------
 Tabes2:Toggle("Kill Aura", function(bool)
@@ -1971,27 +1965,10 @@ function doCn()
 end
 
 ------------------------------dummy--------
-function doDF_a() --Canto em cima
+
+function doDF()
     spawn(function()
-            while getgenv().dya == true do
-
-local args = {
-    [1] = workspace.MAP.dummies:FindFirstChild("Training Dummy").Humanoid,
-    [2] = 2
-}
-
-game:GetService("ReplicatedStorage").jdskhfsIIIllliiIIIdchgdIiIIIlIlIli:FireServer(unpack(args)) 
-
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(82.6349106, -89.5828552, -79.9172363, -0.970527112, -6.81031409e-08, 0.24099198, -6.50738698e-08, 1, 2.05284199e-08, -0.24099198, 4.24110613e-09, -0.970527112)
- 
-             wait()
-        end
-    end)
-end
-
-function doDF_b() --canto em baixo
-    spawn(function()
-            while getgenv().dyb == true do
+            while getgenv().dy == true do
 
 local args = {
     [1] = workspace.MAP.dummies:FindFirstChild("Training Dummy").Humanoid,
@@ -2007,9 +1984,9 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(48.45315
 end
 ---------------------------------------------dummy5k---------------
 
-function doDF2()
+function doDF5k()
     spawn(function()
-            while getgenv().dy2 == true do
+            while getgenv().dy5k == true do
           
 local args = {
     [1] = workspace.MAP.waterfall1.Dummy2.Humanoid,
@@ -2018,10 +1995,7 @@ local args = {
 
 game:GetService("ReplicatedStorage").jdskhfsIIIllliiIIIdchgdIiIIIlIlIli:FireServer(unpack(args))
 
---[[ dummy do canto ]]
- game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1093.59192, -165.049057, 19.5205059, -0.865952671, -0.0208507068, -0.499691099, -8.21541946e-09, 0.999130547, -0.0416908972, 0.500125945, -0.0361023396, -0.865199804)
-game:GetService("Workspace").plot:GetChildren()[3]["Meshes/PolygonDungeon_Environments_01_SM_Env_Rock_Flat_01"].CFrame = CFrame.new(1073.59839, -169.161713, 26.5116978, 0.492429793, 0.05819989, -0.86840409, 1.07656835e-08, 0.997761726, 0.0668693632, 0.870352149, -0.032928478, 0.491327614)
-             wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1051, -165, 26)
  wait()
         end
     end)
