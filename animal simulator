@@ -432,7 +432,7 @@ function Blacklib:Window(gametitle)
     
     spawn(function()
         while task.wait() do
-            titlefunc:Refresh("") wait(.2) titlefunc:Refresh("B") wait(.2) titlefunc:Refresh("Bl") wait(.2) titlefunc:Refresh("Bla") wait(.2) titlefunc:Refresh("Blac") wait(.2) titlefunc:Refresh("Black") wait(.2) titlefunc:Refresh("BlackT") wait(.2) titlefunc:Refresh("BlackTr") wait(.2) titlefunc:Refresh("BlackTra") wait(.2) titlefunc:Refresh("BlackTrap") wait(.9) titlefunc:Refresh("BlackTra") wait(.2) titlefunc:Refresh("BlackTr") wait(.2) titlefunc:Refresh("BlackT") wait(.2) titlefunc:Refresh("Black") wait(.2) titlefunc:Refresh("Blac") wait(.2) titlefunc:Refresh("Bla") wait(.2) titlefunc:Refresh("Bl") wait(.2) titlefunc:Refresh("B") wait(.2) titlefunc:Refresh("") wait(.2) wait(.3)
+            titlefunc:Refresh("") wait(.2) titlefunc:Refresh("P") wait(.2) titlefunc:Refresh("PE") wait(.2) titlefunc:Refresh("PET") wait(.2) titlefunc:Refresh("PETI") wait(.2) titlefunc:Refresh("PETITE") wait(.2) titlefunc:Refresh("PETITE_") wait(.2) titlefunc:Refresh("PETIE_H") wait(.2) titlefunc:Refresh("PETITE_HU") wait(.2) titlefunc:Refresh("PETITE_HUB") wait(.9) titlefunc:Refresh("PETITE_HU") wait(.2) titlefunc:Refresh("PETITE_H") wait(.2) titlefunc:Refresh("PETITE_") wait(.2) titlefunc:Refresh("PETITE") wait(.2) titlefunc:Refresh("PETIT") wait(.2) titlefunc:Refresh("PET") wait(.2) titlefunc:Refresh("PE") wait(.2) titlefunc:Refresh("P") wait(.2) titlefunc:Refresh("") wait(.2) wait(.3)
         end
     end)
     
