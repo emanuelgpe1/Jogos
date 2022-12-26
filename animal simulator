@@ -5,10 +5,6 @@ getgenv().Kill = false; --kill aura
 getgenv().Ez = false; -- spam 1
 getgenv().rdw = false; -- spam 2
 
-print("ai q dilisa")
--- BLACKTRAP V1.0 FIXED_BUILD --
--- REALEASE DATE ON 17/02/2022 --
--- MADE By WANZ --
 -- (WINDOWS AND MOBILE VERSION) --
 local Players = game:GetService("Players")
 local player = Players.LocalPlayer
@@ -1865,7 +1861,7 @@ _G.SectionTextColor = Color3.fromRGB(250,0,0)
 _G.SectionOn = Color3.fromRGB(0, 250, 0)
 -- (0, 250, 0)
 -- Window --
-local Win = Blacklib:Window("PETITE HUB")
+local Win = Blacklib:Window("Animal sim")
 -- Tab -- 
 local Tabes1 = Win:Tab("• farm (on)", img)
 local Tabes2 = Win:Tab("• Combate☠️", img)
