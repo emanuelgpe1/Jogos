@@ -1993,7 +1993,7 @@ local A_1 = game:GetService("Workspace").MAP["5k_dummies"].Dummy2.Humanoid
 local Event = game:GetService("ReplicatedStorage").jdskhfsIIIllliiIIIdchgdIiIIIlIlIli
 Event:FireServer(A_1)
 
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-55, 580, 820)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-55, 578, 820)
  wait()
         end
     end)
