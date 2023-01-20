@@ -1974,11 +1974,9 @@ function doDF()
     spawn(function()
             while getgenv().dy == true do
 
-local A_1 = game:GetService("Workspace").MAP.dummies["Training Dummy"].Humanoid
-local Event = game:GetService("ReplicatedStorage").jdskhfsIIIllliiIIIdchgdIiIIIlIlIli
-Event:FireServer(A_1)
+game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.Q,false,game) -- Press Q key.
 
---game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(48.4531593, -89.9206238, -52.2916718, -0.995899439, 5.04113409e-08, 0.0904669538, 5.2771874e-08, 1, 2.37008297e-08, -0.0904669538, 2.83777535e-08, -0.995899439) 
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-87, 647, 236)
             wait()
         end
     end)
