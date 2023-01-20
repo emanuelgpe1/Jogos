@@ -1903,6 +1903,14 @@ Tabes1:Line()
 
 Tabes1:Label("Others farm")
 
+Tabes1:Toggle("Dummy Cave farm 5k (sem tp)", function(bool)
+    getgenv().dy5kk = bool
+    print('', bool);
+   if bool then
+   doDF5kk();
+  end
+end)
+
  Tabes1:Toggle("coin farm", function(bool)
     getgenv().coin = bool
     print('', bool);
@@ -1992,6 +2000,20 @@ local Event = game:GetService("ReplicatedStorage").jdskhfsIIIllliiIIIdchgdIiIIIl
 Event:FireServer(A_1)
 
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-55, 578, 820)
+ wait()
+        end
+    end)
+end
+
+
+function doDF5kk()
+    spawn(function()
+            while getgenv().dy5kl == true do
+
+local A_1 = game:GetService("Workspace").MAP["5k_dummies"].Dummy2.Humanoid
+local Event = game:GetService("ReplicatedStorage").jdskhfsIIIllliiIIIdchgdIiIIIlIlIli
+Event:FireServer(A_1)
+
  wait()
         end
     end)
