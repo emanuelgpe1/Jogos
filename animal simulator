@@ -1882,7 +1882,7 @@ Tabes1:Label("Level farm")
 
 Tabes1:Line()
 
-Tabes1:Toggle("Dummy farm (off)", function(bool)
+Tabes1:Toggle("Dummy farm", function(bool)
     getgenv().dy = bool
     print('', bool);
    if bool then
