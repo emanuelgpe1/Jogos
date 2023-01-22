@@ -2001,6 +2001,13 @@ function doDF()
 
 game:GetService("Players").LocalPlayer.PlayerGui.TeamGUI.createFrame.bodyFrame.createButton.createTeamEvent:FireServer(unpack(args))
 
+local args = {
+    [1] = "\13\npetite hub\13\n\13\n"
+}
+
+game:GetService("ReplicatedStorage").acceptedEvent:FireServer(unpack(args))
+
+----------------------
 
 game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.Q,false,game) -- Press Q key.
 
@@ -2026,7 +2033,13 @@ function doDF1()
 }
 
 game:GetService("Players").LocalPlayer.PlayerGui.TeamGUI.createFrame.bodyFrame.createButton.createTeamEvent:FireServer(unpack(args))
+------------------------
+local args = {
+    [1] = "\13\npetite hub\13\n\13\n"
+}
 
+game:GetService("ReplicatedStorage").acceptedEvent:FireServer(unpack(args))
+-------------
 
 game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.Q,false,game) -- Press Q key.
 
@@ -2059,8 +2072,14 @@ function doDF5k()
 }
 
 game:GetService("Players").LocalPlayer.PlayerGui.TeamGUI.createFrame.bodyFrame.createButton.createTeamEvent:FireServer(unpack(args))
+-----------------------
+local args = {
+    [1] = "\13\npetite hub\13\n\13\n"
+}
 
-
+game:GetService("ReplicatedStorage").acceptedEvent:FireServer(unpack(args))
+----
+-----
 local args = {
     [1] = workspace.MAP:FindFirstChild("5k_dummies").Dummy2.Humanoid,
     [2] = 1
@@ -2083,6 +2102,12 @@ function doDF5k1()
 }
 
 game:GetService("Players").LocalPlayer.PlayerGui.TeamGUI.createFrame.bodyFrame.createButton.createTeamEvent:FireServer(unpack(args))
+--------------------------
+local args = {
+    [1] = "\13\npetite hub\13\n\13\n"
+}
+
+game:GetService("ReplicatedStorage").acceptedEvent:FireServer(unpack(args))
 
 -- dano --
 
