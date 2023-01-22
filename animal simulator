@@ -1994,6 +1994,13 @@ end
 function doDF()
     spawn(function()
             while getgenv().dy == true do
+            -- grupo --
+ local args = {
+    [1] = "\13\npetite hub\13\n\13\n"
+}
+
+game:GetService("Players").LocalPlayer.PlayerGui.TeamGUI.createFrame.bodyFrame.createButton.createTeamEvent:FireServer(unpack(args))
+
 
 game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.Q,false,game) -- Press Q key.
 
@@ -2013,6 +2020,13 @@ end
 function doDF1()
     spawn(function()
             while getgenv().dy1 == true do
+            -- grupo --
+ local args = {
+    [1] = "\13\npetite hub\13\n\13\n"
+}
+
+game:GetService("Players").LocalPlayer.PlayerGui.TeamGUI.createFrame.bodyFrame.createButton.createTeamEvent:FireServer(unpack(args))
+
 
 game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.Q,false,game) -- Press Q key.
 
@@ -2039,6 +2053,13 @@ end
 function doDF5k()
     spawn(function()
             while getgenv().dy5k == true do
+            -- grupo --
+ local args = {
+    [1] = "\13\npetite hub\13\n\13\n"
+}
+
+game:GetService("Players").LocalPlayer.PlayerGui.TeamGUI.createFrame.bodyFrame.createButton.createTeamEvent:FireServer(unpack(args))
+
 
 local args = {
     [1] = workspace.MAP:FindFirstChild("5k_dummies").Dummy2.Humanoid,
@@ -2056,6 +2077,14 @@ end
 function doDF5k1()
     spawn(function()
             while getgenv().dy5k1 == true do
+ -- grupo --
+ local args = {
+    [1] = "\13\npetite hub\13\n\13\n"
+}
+
+game:GetService("Players").LocalPlayer.PlayerGui.TeamGUI.createFrame.bodyFrame.createButton.createTeamEvent:FireServer(unpack(args))
+
+-- dano --
 
 local args = {
     [1] = workspace.MAP:FindFirstChild("5k_dummies").Dummy2.Humanoid,
@@ -2063,6 +2092,8 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").jdskhfsIIIllliiIIIdchgdIiIIIlIlIli:FireServer(unpack(args))
+
+-- fire --
 
 local args = {
     [1] = Vector3.new(-22.605297088623047, 593.983154296875, 820.87109375)
