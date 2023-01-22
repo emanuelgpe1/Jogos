@@ -1,5 +1,7 @@
 getgenv().dy5k = false; --dummy5k
+getgenv().dy5k1 = false; --dummy5k
 getgenv().dy = false; --dummy
+getgenv().dy1 = false;
 getgenv().coin = false; --coin
 getgenv().Kill = false; --kill aura
 getgenv().Ez = false; -- spam 1
@@ -1876,13 +1878,11 @@ Tabes4:Note("+Dummy farm (05/12/2022)")
 Tabes4:Note("")
 Tabes4:Note("+Coin farm (04/12/2022)")
 --------------------------------------------coin----------------------------------
-Tabes1:Line()
-
-Tabes1:Label("Level farm")
+Tabes1:Label("Farm")
 
 Tabes1:Line()
 
-Tabes1:Toggle("Dummy farm", function(bool)
+Tabes1:Toggle("Dummy", function(bool)
     getgenv().dy = bool
     print('', bool);
    if bool then
@@ -1890,8 +1890,7 @@ Tabes1:Toggle("Dummy farm", function(bool)
   end
 end)
 
-
-Tabes1:Toggle("Dummy Cave farm (5k)", function(bool)
+Tabes1:Toggle("Dummy Cave ", function(bool)
     getgenv().dy5k = bool
     print('', bool);
    if bool then
@@ -1899,17 +1898,31 @@ Tabes1:Toggle("Dummy Cave farm (5k)", function(bool)
   end
 end)
 
+Tabes1:Label("Farm + Fire")
+
+Tabes1:Toggle("Dummy + fire", function(bool)
+    getgenv().dy1 = bool
+    print('', bool);
+   if bool then
+   doDF1();
+  end
+end)
+
+Tabes1:Toggle("Dummy Cave + fire", function(bool)
+    getgenv().dy5k1 = bool
+    print('', bool);
+   if bool then
+   doDF5k1();
+  end
+end)
+
+
+
 Tabes1:Line()
 
 Tabes1:Label("Others farm")
 
-Tabes1:Toggle("Dummy Cave farm 5k (sem tp)", function(bool)
-    getgenv().dy5kk = bool
-    print('', bool);
-   if bool then
-   doDF5kk();
-  end
-end)
+
 
  Tabes1:Toggle("coin farm", function(bool)
     getgenv().coin = bool
@@ -1971,7 +1984,7 @@ function doCn()
     spawn(function()
             while getgenv().coin == true do
             game:GetService("ReplicatedStorage").Events.CoinEvent:FireServer()
-             wait()
+             wait(1.5)
         end
     end)
 end
@@ -1984,7 +1997,39 @@ function doDF()
 
 game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.Q,false,game) -- Press Q key.
 
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-87, 647, 236)
+local args = {
+    [1] = workspace.MAP.dummies:FindFirstChild("Training Dummy").Humanoid,
+    [2] = 7
+}
+
+game:GetService("ReplicatedStorage").jdskhfsIIIllliiIIIdchgdIiIIIlIlIli:FireServer(unpack(args))
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-118, 647, 226)
+            wait()
+        end
+    end)
+end
+
+function doDF1()
+    spawn(function()
+            while getgenv().dy1 == true do
+
+game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.Q,false,game) -- Press Q key.
+
+local args = {
+    [1] = workspace.MAP.dummies:FindFirstChild("Training Dummy").Humanoid,
+    [2] = 7
+}
+
+game:GetService("ReplicatedStorage").jdskhfsIIIllliiIIIdchgdIiIIIlIlIli:FireServer(unpack(args))
+
+local args = {
+    [1] = Vector3.new(-86.18025207519531, 648.1289672851562, 233.81790161132812)
+}
+
+game:GetService("Players").LocalPlayer.Character.Fireball.FireballEvent:FireServer(unpack(args))
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-118, 647, 226)
             wait()
         end
     end)
@@ -1995,25 +2040,37 @@ function doDF5k()
     spawn(function()
             while getgenv().dy5k == true do
 
-local A_1 = game:GetService("Workspace").MAP["5k_dummies"].Dummy2.Humanoid
-local Event = game:GetService("ReplicatedStorage").jdskhfsIIIllliiIIIdchgdIiIIIlIlIli
-Event:FireServer(A_1)
+local args = {
+    [1] = workspace.MAP:FindFirstChild("5k_dummies").Dummy2.Humanoid,
+    [2] = 1
+}
+
+game:GetService("ReplicatedStorage").jdskhfsIIIllliiIIIdchgdIiIIIlIlIli:FireServer(unpack(args))
 
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-55, 578, 820)
  wait()
         end
     end)
 end
-
-
-function doDF5kk()
+---------------------------5k e fire
+function doDF5k1()
     spawn(function()
-            while getgenv().dy5kl == true do
+            while getgenv().dy5k1 == true do
 
-local A_1 = game:GetService("Workspace").MAP["5k_dummies"].Dummy2.Humanoid
-local Event = game:GetService("ReplicatedStorage").jdskhfsIIIllliiIIIdchgdIiIIIlIlIli
-Event:FireServer(A_1)
+local args = {
+    [1] = workspace.MAP:FindFirstChild("5k_dummies").Dummy2.Humanoid,
+    [2] = 1
+}
 
+game:GetService("ReplicatedStorage").jdskhfsIIIllliiIIIdchgdIiIIIlIlIli:FireServer(unpack(args))
+
+local args = {
+    [1] = Vector3.new(-22.605297088623047, 593.983154296875, 820.87109375)
+}
+
+game:GetService("Players").LocalPlayer.Character.Fireball.FireballEvent:FireServer(unpack(args))
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-55, 578, 820)
  wait()
         end
     end)
