@@ -1869,9 +1869,12 @@ local Tabes1 = Win:Tab("• farm (on)", img)
 local Tabes2 = Win:Tab("• Combate☠️", img)
 local Tabes3 = Win:Tab("• Outros⚠️", img)
 local Tabes4 = Win:Tab("• update", img)
+local TabesAx = Win:Tab("• Axelot", img)
 
 
 ---------------------------------------------------------update--------------------
+Tabes4:Note("+Axelot Tp (03/03/2023)")
+Tabes4:Note("")
 Tabes4:Note("+Dummy cave farm (24/12/2022)")
 Tabes4:Note("")
 Tabes4:Note("+Dummy farm (05/12/2022)")
@@ -2197,3 +2200,37 @@ function doRdw()
      end
     end)
   end
+
+
+TabesAx:Button("Axelot 1 (in water)", function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(101.113762, 635.96637, -180.176529, 1, 0, 0, 0, 1, 0, 0, 0, 1 )
+
+end)
+TabesAx:Button("Axelot 2 (in grass)", function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-285.710144, 103.547249, 580.785828, 1, 0, 0, 0, 1, 0, 0, 0, 1 )
+
+end)
+TabesAx:Button("Axelot 3 ", function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new( 925.596985, 674.377808, 614.194275, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+
+end)
+TabesAx:Button("Axelot 4 ", function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new( -493.708862, 638.895935, 101.82299, 1, 0, 0, 0, 1, 0, 0, 0, 1 )
+
+end)
+TabesAx:Button("Axelot 5 (in tree)", function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new( 364, 688, 1390 )
+end)
+TabesAx:Button("Axelot 6", function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new( 6, 592, 764)
+end)
+
+TabesAx:Note("place the ´aquarium´ house and climb the tree")
+TabesAx:Note("to get the green Axelot")
+TabesAx:Button("Plot house", function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(642, 645, 576)
+end)
+
+TabesAx:Button("Axelot tp", function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(721, 715, 595)
+end)
