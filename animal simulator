@@ -1868,11 +1868,15 @@ local Win = Blacklib:Window(". .  Animal sim")
 local Tabes1 = Win:Tab("• farm (on)", img)
 local Tabes2 = Win:Tab("• Combate☠️", img)
 local Tabes3 = Win:Tab("• Outros⚠️", img)
-local Tabes4 = Win:Tab("• update", img)
+local Tabes4 = Win:Tab("• update Logs", img)
 local TabesAx = Win:Tab("• Axelot", img)
+local TabesCd = Win:Tab("• Crocodile", img)
 
 
 ---------------------------------------------------------update--------------------
+Tabes4:Note("+Crocodile Tp (06/04/2023)")
+Tabes4:Note("-Coin farm (06/04/2023)")
+Tabes4:Note("")
 Tabes4:Note("+Axelot Tp (03/03/2023)")
 Tabes4:Note("")
 Tabes4:Note("+Dummy cave farm (24/12/2022)")
@@ -1923,6 +1927,7 @@ end)
 
 Tabes1:Line()
 
+--[[
 Tabes1:Label("Others farm")
 
 
@@ -1936,6 +1941,7 @@ Tabes1:Label("Others farm")
 end)
 
 Tabes1:Line()
+]]
 
 -----------------------------------------------------combate-------------------------------------
 Tabes2:Toggle("Kill Aura", function(bool)
@@ -2233,4 +2239,20 @@ end)
 
 TabesAx:Button("Axelot tp", function()
    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(721, 715, 595)
+end)
+-------------------------------------------------------------------------------------------------------
+TabesCd:Button("Crocodile fire tp", function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-229.973251, 703.012756, 1492.42554, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+end)
+TabesCd:Button("Crocodile greem tp", function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-128.746109, 699.0401, 302.526123, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+end)
+TabesCd:Button("Crocodile white tp", function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(674.44574, 669.853088, 84.362915, -0.980987191, 0, -0.194072336, 0, 1, 0, 0.194072336, 0, -0.980987191)
+end)
+TabesCd:Button("Crocodile pink tp", function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(248.051682, 638.206665, 432.475189, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+end)
+TabesCd:Button("Crocodile blue tp", function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-250.476776, 685.947021, 812.82312, 0, 0, -1, 0, 1, 0, 1, 0, 0)
 end)
