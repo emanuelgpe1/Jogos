@@ -1,0 +1,270 @@
+loadstring(game:HttpGet('https://raw.githubusercontent.com/1uaxx/yunv2/main/librarysource.lua'))()
+
+local Library = initLibrary()
+local Window = Library:Load({name = "PetiteHub (vitor meu idolo <3)", sizeX = 435, sizeY = 512, color = Color3.fromRGB(255, 255, 255)})
+
+local Tab1 = Window:Tab("Farm")
+local Tab2 = Window:Tab("Misc")
+
+
+local treino = Tab1:Section{name = "Auto treino", column = 1}
+local rb = Tab1:Section{name = "Auto rebirth", column = 2}
+local door = Tab2:Section{name = "Auto buy Door (click 1 vez!!!!)", column = 2}
+local aura = Tab2:Section{name = "auras", column = 1}
+--
+
+    rb:Toggle {
+    Name = "Enabled",
+    flag = "ooolol", 
+    callback = function(bool)
+    getgenv().rb = bool
+    print('', bool);
+   if bool then
+   doRb();
+   end
+  end
+}
+
+    treino:Toggle {
+    Name = "Enabled",
+    flag = "ooolol", 
+    callback = function(bool)
+    getgenv().tr = bool
+    print('', bool);
+   if bool then
+   dotr();
+   end
+  end
+}
+
+    door:Toggle {
+    Name = "Enabled",
+    flag = "ooolol", 
+    callback = function(bool)
+    getgenv().dor = bool
+    print('', bool);
+   if bool then
+   doDor();
+   end
+  end
+}
+
+    aura:Toggle {
+    Name = "aura 1",
+    flag = "ooolol", 
+    callback = function(bool)
+    getgenv().aura1 = bool
+    print('', bool);
+   if bool then
+   doau1();
+   end
+  end
+}
+    aura:Toggle {
+    Name = "aura 2",
+    flag = "ooolol", 
+    callback = function(bool)
+    getgenv().aura2 = bool
+    print('', bool);
+   if bool then
+   doau2();
+   end
+  end
+}
+    aura:Toggle {
+    Name = "aura 3",
+    flag = "ooolol", 
+    callback = function(bool)
+    getgenv().aura3 = bool
+    print('', bool);
+   if bool then
+   doau3();
+   end
+  end
+}
+    aura:Toggle {
+    Name = "aura 4",
+    flag = "ooolol", 
+    callback = function(bool)
+    getgenv().aura4 = bool
+    print('', bool);
+   if bool then
+   doau4();
+   end
+  end
+}
+    aura:Toggle {
+    Name = "aura 5",
+    flag = "ooolol", 
+    callback = function(bool)
+    getgenv().aura5 = bool
+    print('', bool);
+   if bool then
+   doau5();
+   end
+  end
+}
+    aura:Toggle {
+    Name = "aura 6",
+    flag = "ooolol", 
+    callback = function(bool)
+    getgenv().aura6 = bool
+    print('', bool);
+   if bool then
+   doau6();
+   end
+  end
+}
+
+
+function doRb()
+    spawn(function()
+            while getgenv().rb == true do
+ 
+local Event = game:GetService("ReplicatedStorage").Remotes.RebirthRemote
+Event:FireServer()
+
+wait()
+        end
+   end)
+end
+
+function doau1()
+    spawn(function()
+            while getgenv().aura1 == true do
+local A_1 = 
+{
+	["Action"] = "Equip", 
+	["Selected"] = 1
+}
+local Event = game:GetService("ReplicatedStorage").Remotes.AurasRemote
+Event:FireServer(A_1)
+
+wait(99)
+        end
+   end)
+end
+
+function doau2()
+    spawn(function()
+            while getgenv().aura2 == true do
+local A_1 = 
+{
+	["Action"] = "Equip", 
+	["Selected"] = 2
+}
+local Event = game:GetService("ReplicatedStorage").Remotes.AurasRemote
+Event:FireServer(A_1)
+
+wait(99)
+        end
+   end)
+end
+
+function doau3()
+    spawn(function()
+            while getgenv().aura3 == true do
+local A_1 = 
+{
+	["Action"] = "Equip", 
+	["Selected"] = 3
+}
+local Event = game:GetService("ReplicatedStorage").Remotes.AurasRemote
+Event:FireServer(A_1)
+
+wait(99)
+        end
+   end)
+end
+
+function doau4()
+    spawn(function()
+            while getgenv().aura4 == true do
+local A_1 = 
+{
+	["Action"] = "Equip", 
+	["Selected"] = 4
+}
+local Event = game:GetService("ReplicatedStorage").Remotes.AurasRemote
+Event:FireServer(A_1)
+
+wait(99)
+        end
+   end)
+end
+
+function doau5()
+    spawn(function()
+            while getgenv().aura5 == true do
+local A_1 = 
+{
+	["Action"] = "Equip", 
+	["Selected"] = 5
+}
+local Event = game:GetService("ReplicatedStorage").Remotes.AurasRemote
+Event:FireServer(A_1)
+
+wait(99)
+        end
+   end)
+end
+
+function doau6()
+    spawn(function()
+            while getgenv().aura6 == true do
+local A_1 = 
+{
+	["Action"] = "Equip", 
+	["Selected"] = 6
+}
+local Event = game:GetService("ReplicatedStorage").Remotes.AurasRemote
+Event:FireServer(A_1)
+
+wait(99)
+        end
+   end)
+end
+
+function dotr()
+    spawn(function()
+            while getgenv().tr == true do
+local A_1 = 
+{
+	["BoxingToHit"] = game:GetService("Workspace").Maps.Map1.Area5.PunchBags["Punching bagVip"].HumanoidRootPart, 
+	["HitType"] = "Boxing"
+}
+local Event = game:GetService("ReplicatedStorage").Remotes.HitRemote
+Event:FireServer(A_1)
+
+wait()
+        end
+   end)
+end
+
+
+function doDor()
+    spawn(function()
+            while getgenv().dor == true do
+local A_1 = "Map1"
+local A_2 = "Door2"
+local Event = game:GetService("ReplicatedStorage").Remotes.BuyDoorRemote
+Event:FireServer(A_1, A_2)
+
+local A_1 = "Map1"
+local A_2 = "Door3"
+local Event = game:GetService("ReplicatedStorage").Remotes.BuyDoorRemote
+Event:FireServer(A_1, A_2)
+
+local A_1 = "Map1"
+local A_2 = "Door4"
+local Event = game:GetService("ReplicatedStorage").Remotes.BuyDoorRemote
+Event:FireServer(A_1, A_2)
+
+local A_1 = "Map1"
+local A_2 = "Door5"
+local Event = game:GetService("ReplicatedStorage").Remotes.BuyDoorRemote
+Event:FireServer(A_1, A_2)
+wait(9999999999999999999999)
+        end
+   end)
+end
