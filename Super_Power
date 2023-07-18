@@ -1,3 +1,5 @@
+if game.PlaceId == 11696357981 then 
+
 getgenv().SecureMode = true
 
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
@@ -15,36 +17,9 @@ local Window = Rayfield:CreateWindow({
 
 local Tab1 = Window:CreateTab("Auto farm", 4483362458) -- Title, Image
 local Tab2 = Window:CreateTab("Upgrade", 4483362458)
-
-local Section = Tab1:CreateSection("Misc")
-
-local Button = Tab1:CreateButton({
-   Name = "Remove dialog",
-   Callback = function()
-  game:GetService("Players").LocalPlayer.PlayerGui.Main.HUD.Dialogue.Visible = false
-   end,
-})
-
-local Button = Tab1:CreateButton({
-   Name = "Enable dialog",
-   Callback = function()
-  game:GetService("Players").LocalPlayer.PlayerGui.Main.HUD.Dialogue.Visible = true
-   end,
-})
+local Tab3 = Window:CreateTab("Teleport", 4483362458)
 
 local Section = Tab1:CreateSection("farm")
-
-local Toggle = Tab1:CreateToggle({
-   Name = "Auto give quest",
-   CurrentValue = false,
-   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(bool)
-   getgenv().Qt = bool
-   if bool then
-    doQt();
-    end
-   end,
-})
 
 local Toggle = Tab1:CreateToggle({
    Name = "Auto Power",
@@ -80,6 +55,62 @@ local Toggle = Tab1:CreateToggle({
    if bool then
     doDf();
     end
+   end,
+})
+
+local Section = Tab1:CreateSection("Quest")
+
+local Toggle = Tab1:CreateToggle({
+   Name = "Chakra quest",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(bool)
+   getgenv().Qt = bool
+   if bool then
+    doQt();
+    end
+   end,
+})
+
+local Toggle = Tab1:CreateToggle({
+   Name = "Stan Lee quest",
+   CurrentValue = false,
+   Flag = "Toggle9", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(bool)
+   getgenv().Ql = bool
+   if bool then
+    doQl();
+    end
+   end,
+})
+
+local Toggle = Tab1:CreateToggle({
+   Name = "Boss Yama quest",
+   CurrentValue = false,
+   Flag = "Toggle00", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(bool)
+   getgenv().Qy = bool
+   if bool then
+    doQy();
+    end
+   end,
+})
+
+
+
+local Section = Tab1:CreateSection("Misc")
+
+local Button = Tab1:CreateButton({
+   Name = "Remove dialog",
+   Callback = function()
+  game:GetService("Players").LocalPlayer.PlayerGui.Main.HUD.Dialogue.Visible = false
+   end,
+})
+
+local Button = Tab1:CreateButton({
+   Name = "Enable dialog",
+   Callback = function()
+  game:GetService("Players").LocalPlayer.PlayerGui.Main.HUD.Dialogue.Visible = true
    end,
 })
 
@@ -122,52 +153,41 @@ local Toggle = Tab2:CreateToggle({
     end
    end,
 })
+-------------
+local Section = Tab3:CreateSection("Teleport")
 
+local Button = Tab3:CreateButton({
+   Name = "Defense area",
+   Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(511, 126, -861)
+   end,
+})
 
+local Button = Tab3:CreateButton({
+   Name = "Power area",
+   Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(12, 8, 464)
+   end,
+})
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+local Button = Tab3:CreateButton({
+   Name = "Speed area",
+   Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(858, 15, -2452)
+   end,
+})
+--9
+--99
+--999
+--9999
+--99999
+--999999
+--9999999
+--99999999
+--999999999
+--9999999999
+--99999999999
+--999999999999
 function doDf()
  spawn(function()
    while getgenv().Df == true do
@@ -210,7 +230,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Traini
    end
   end)
 end
-
+--------------------------------
 function doQt()
  spawn(function()
    while getgenv().Qt == true do
@@ -224,6 +244,34 @@ game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("QuestG
   end)
 end
 
+
+function doQl()
+ spawn(function()
+   while getgenv().Ql == true do
+local args = {
+    [1] = "Stan Lee"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("QuestGiverInteract"):FireServer(unpack(args))
+loadstring(game:HttpGet("https://raw.githubusercontent.com/emanuelgpe1/menu/main/stanlee%20quest"))() 	
+wait()
+   end
+  end)
+end
+
+function doQy()
+ spawn(function()
+   while getgenv().Qy == true do
+local args = {
+    [1] = "Boss Yama"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("QuestGiverInteract"):FireServer(unpack(args))
+
+    wait()
+   end
+  end)
+end
 -------------------------------------
 
 function doUS()
@@ -266,4 +314,5 @@ game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Upgrad
 wait()
    end
   end)
+end
 end
