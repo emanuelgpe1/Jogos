@@ -1,0 +1,160 @@
+local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+wait(1)
+vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
+            
+getgenv().SecureMode = true
+
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+   Name = "Petite Hub (Gumball Edition 🔥)",
+   LoadingTitle = "Animal simulator",
+   LoadgSubtitline = "by petite",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Petite_Hub"
+   },
+})
+
+local Tab1 = Window:CreateTab("Auto farm", 4483362458) -- Title, Image
+local Tab3 = Window:CreateTab("Teleport", 4483362458)
+
+local Section = Tab1:CreateSection("farm")
+
+
+local Toggle = Tab1:CreateToggle({
+   Name = "🔥Ative para farm com fire🔥",
+   CurrentValue = false,
+   Flag = "Toggle11", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(bool)
+   getgenv().F = bool
+   if bool then
+    doF();
+    end
+   end,
+})
+
+local Toggle = Tab1:CreateToggle({
+   Name = "Dummy cave + fire",
+   CurrentValue = false,
+   Flag = "Toggle2", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(bool)
+   getgenv().Pw = bool
+   if bool then
+    doPw();
+    end
+   end,
+})
+
+local Toggle = Tab1:CreateToggle({
+   Name = "dummy + fire",
+   CurrentValue = false,
+   Flag = "Toggle7", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(bool)
+   getgenv().Sp = bool
+   if bool then
+    doSp();
+    end
+   end,
+})
+
+
+
+local Button = Tab1:CreateButton({
+   Name = "Remove chuva (off)",
+   Callback = function()
+  game.workspace.Terrain:Destroy()
+   end,
+})
+
+--------------------------------------------------
+
+local Section = Tab3:CreateSection("Teleport")
+
+local Button = Tab3:CreateButton({
+   Name = "eletric ball",
+   Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-26.3255882, 600.825317, 793.171997, -0.988075733, 0, -0.153969035, 0, 1, 0, 0.153969035, 0, -0.988075733)
+   end,
+})
+
+
+
+--9
+--99
+--999
+--9999
+--99999
+--999999
+--9999999
+--99999999
+--999999999
+--9999999999
+--99999999999
+--999999999999
+
+function doSp()
+ spawn(function()
+   while getgenv().Sp == true do
+local args = {
+    [1] = Vector3.new(-114.397469, 648.042297, 220.434296, -0.990509868, 0, 0.137442678, 0, 1, 0, -0.137442678, 0, -0.990509868)
+}
+
+game:GetService("Players").LocalPlayer.Character.Fireball.FireballEvent:FireServer(unpack(args))
+
+local args = {
+    [1] = workspace:WaitForChild("MAP"):WaitForChild("dummies"):WaitForChild("Training Dummy"):WaitForChild("Humanoid"),
+    [2] = 1
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("jdskhfsIIIllliiIIIdchgdIiIIIlIlIli"):FireServer(unpack(args))
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-115, 648, 222)
+    wait()
+   end
+  end)
+end
+
+
+function doPw()
+ spawn(function()
+   while getgenv().Pw == true do
+ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-54, 579, 832)
+ game.workspace.MAP["low poly rocks"]:GetChildren()[3]:GetChildren()[6].CFrame = CFrame.new(-55, 573, 831)
+
+local args = {
+    [1] = workspace:WaitForChild("MAP"):WaitForChild("5k_dummies"):WaitForChild("Dummy2"):WaitForChild("Humanoid"),
+    [2] = 3
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("jdskhfsIIIllliiIIIdchgdIiIIIlIlIli"):FireServer(unpack(args))
+
+local args = {
+    [1] = Vector3.new(-53.7210808, 591.756653, 828.131958, 0.707134247, -0, -0.707079291, 0, 1, -0, 0.707079291, 0, 0.707134247)
+}
+
+game:GetService("Players").LocalPlayer.Character.Fireball.FireballEvent:FireServer(unpack(args))
+
+    wait()
+   end
+  end)
+end
+
+
+function doF()
+ spawn(function()
+   while getgenv().F == true do
+
+local tool = game.Players.LocalPlayer.Backpack.Fireball
+local humanoid = game.Players.LocalPlayer.Character:WaitForChild("Humanoid")
+
+humanoid:EquipTool(tool)
+
+    wait(10)
+   end
+  end)
+end
