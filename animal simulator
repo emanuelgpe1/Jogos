@@ -1,6 +1,26 @@
 wait(1)
 
-----------------------------------------------------------------// AFK \\-------------------------------------------------------------------------------
+-----------------------------------------------------------------// Function For Kill Aura \\-------------------------------------------------------------------------------
+local function findPlr(name)
+    for _,v in pairs(game:GetService("Players"):GetPlayers()) do
+        if string.find(v.Name, name) then
+            return v
+        end
+    end
+    return nil
+    end
+    local function damageplayer(player)
+    for i,p in pairs(game.Workspace:GetChildren()) do
+    if p.Name == player then
+    print("Damaging " .. player)
+    game:GetService("ReplicatedStorage").jdskhfsIIIllliiIIIdchgdIiIIIlIlIli:FireServer(p.HumanoidRootPart,1) -- the last arguement is not damage don't bother changin its
+    print("Damaged " .. player)
+	end
+    end
+    end
+
+
+-----------------------------------------------------------------// AFK \\-------------------------------------------------------------------------------
 
 local vu = game:GetService("VirtualUser")
 	game:GetService("Players").LocalPlayer.Idled:connect(function()
@@ -312,11 +332,17 @@ local slider = sectorLp.element('Slider', 'JumpPower', {default = {min = 50, max
 end)
 
 ----------------------------------------------------------------- // CLAN || PVP \\ -----------------------------------------------------------------------------------
+
+
+local button = sectorPvp.element('Button', 'Execute Hitbox Scipt', nil, function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/RectangularObject/UniversalHBE/main/main.lua",true))()
+end)
+
 local toggle = sectorPvp.element('Toggle', 'Kill Aura', false, function(v)
-
-   _G.OnKa = (v.Toggle)
-
-    while _G.OnKa == true do      
+		
+	_G.OnKa = (v.Toggle)
+	
+    while _G.OnKa == true do
        wait()
        for i,v in pairs(game.Players:GetChildren()) do
         for i,p in pairs(game.Workspace:GetChildren()) do
