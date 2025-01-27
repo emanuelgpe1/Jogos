@@ -1,57 +1,81 @@
-while wait() do local args = {
+while wait() do
+
+local args = {
     [1] = workspace:WaitForChild("NPC"):WaitForChild("Zombie"):WaitForChild("RightLowerLeg")
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("OnSuccessfulHit"):FireServer(unpack(args))
- local args = {
+
+local args = {
     [1] = workspace:WaitForChild("NPC"):WaitForChild("Villager"):WaitForChild("LeftLowerLeg")
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("OnSuccessfulHit"):FireServer(unpack(args))
-   local args = {
+
+local args = {
     [1] = workspace:WaitForChild("NPC"):WaitForChild("Magma"):WaitForChild("LeftHand")
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("OnSuccessfulHit"):FireServer(unpack(args))
-  local args = {
+
+local args = {
     [1] = workspace:WaitForChild("NPC"):WaitForChild("Agrynoth"):WaitForChild("LeftHand")
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("OnSuccessfulHit"):FireServer(unpack(args))
-  local args = {
-    [1] = workspace:WaitForChild("NPC"):WaitForChild("General"):WaitForChild("LeftHand")
-}
 
-game:GetService("ReplicatedStorage"):WaitForChild("OnSuccessfulHit"):FireServer(unpack(args))
- local args = {
+local args = {
     [1] = workspace:WaitForChild("NPC"):WaitForChild("Commander"):WaitForChild("RightHand")
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("OnSuccessfulHit"):FireServer(unpack(args))
- local args = {
+
+local args = {
+    [1] = workspace:WaitForChild("NPC"):WaitForChild("General"):WaitForChild("LeftHand")
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("OnSuccessfulHit"):FireServer(unpack(args))
+
+local args = {
     [1] = workspace:WaitForChild("NPC"):WaitForChild("Mushirio"):WaitForChild("LeftUpperArm")
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("OnSuccessfulHit"):FireServer(unpack(args))
-   local args = {
+
+local args = {
     [1] = workspace:WaitForChild("NPC"):WaitForChild("Borock"):WaitForChild("LowerTorso")
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("OnSuccessfulHit"):FireServer(unpack(args))
-   local args = {
+
+local args = {
     [1] = workspace:WaitForChild("NPC"):WaitForChild("Castle Knight"):WaitForChild("LeftUpperLeg")
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("OnSuccessfulHit"):FireServer(unpack(args))
-   local args = {
+
+local args = {
     [1] = workspace:WaitForChild("NPC"):WaitForChild("King"):WaitForChild("Cape")
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("OnSuccessfulHit"):FireServer(unpack(args))
- local args = {
+
+local args = {
     [1] = workspace:WaitForChild("NPC"):WaitForChild("Skeleton Knight"):WaitForChild("RightFoot")
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("OnSuccessfulHit"):FireServer(unpack(args))
 
- end
+local args = {
+    [1] = workspace:WaitForChild("NPC"):WaitForChild("Goblin"):WaitForChild("LeftLowerLeg")
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("OnSuccessfulHit"):FireServer(unpack(args))
+
+local args = {
+    [1] = workspace:WaitForChild("NPC"):WaitForChild("Boss Goblin"):WaitForChild("HumanoidRootPart")
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("OnSuccessfulHit"):FireServer(unpack(args))
+
+end
