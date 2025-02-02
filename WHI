@@ -1,0 +1,542 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local PetiteWHI = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local TextLabel = Instance.new("TextLabel")
+local Vulcanic = Instance.new("TextButton")
+local Lunar = Instance.new("TextButton")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextLabel_3 = Instance.new("TextLabel")
+local VulcanicGUI = Instance.new("Frame")
+local On = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local VulcanicG = Instance.new("Frame")
+local On_2 = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local off = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local TextLabel_4 = Instance.new("TextLabel")
+local TextLabel_5 = Instance.new("TextLabel")
+local LunarGUI = Instance.new("Frame")
+local On_3 = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+local LunarG = Instance.new("Frame")
+local On_4 = Instance.new("TextButton")
+local UICorner_6 = Instance.new("UICorner")
+local off_2 = Instance.new("TextButton")
+local UICorner_7 = Instance.new("UICorner")
+local TextLabel_6 = Instance.new("TextLabel")
+local TextLabel_7 = Instance.new("TextLabel")
+local Open = Instance.new("ImageButton")
+local UICorner_8 = Instance.new("UICorner")
+
+--Properties:
+
+PetiteWHI.Name = "PetiteWHI"
+PetiteWHI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+PetiteWHI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+PetiteWHI.ResetOnSpawn = false
+
+Frame.Parent = PetiteWHI
+Frame.BackgroundColor3 = Color3.fromRGB(43, 43, 43)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.330599368, 0, 0.230891749, 0)
+Frame.Size = UDim2.new(0.338801265, 0, 0.538216531, 0)
+Frame.Visible = false
+
+UICorner.Parent = Frame
+
+ScrollingFrame.Parent = Frame
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(59, 59, 59)
+ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScrollingFrame.BorderSizePixel = 0
+ScrollingFrame.Position = UDim2.new(0.0242085662, 0, 0.0207100157, 0)
+ScrollingFrame.Size = UDim2.new(0.24767226, 0, 0.952662826, 0)
+ScrollingFrame.ScrollingEnabled = false
+ScrollingFrame.VerticalScrollBarPosition = Enum.VerticalScrollBarPosition.Left
+
+TextLabel.Parent = ScrollingFrame
+TextLabel.BackgroundColor3 = Color3.fromRGB(59, 59, 59)
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.0300751887, 0, -0.00414195564, 0)
+TextLabel.Size = UDim2.new(0, 124, 0, 8)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = ""
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextSize = 14.000
+
+Vulcanic.Name = "Vulcanic"
+Vulcanic.Parent = ScrollingFrame
+Vulcanic.BackgroundColor3 = Color3.fromRGB(43, 43, 43)
+Vulcanic.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Vulcanic.BorderSizePixel = 0
+Vulcanic.Position = UDim2.new(0.0751879662, 0, 0.098150976, 0)
+Vulcanic.Size = UDim2.new(0.887218058, 0, -0.0573434904, 0)
+Vulcanic.Font = Enum.Font.Unknown
+Vulcanic.Text = "Vulcanic"
+Vulcanic.TextColor3 = Color3.fromRGB(0, 0, 0)
+Vulcanic.TextScaled = true
+Vulcanic.TextSize = 14.000
+Vulcanic.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+Vulcanic.TextStrokeTransparency = 0.000
+Vulcanic.TextWrapped = true
+
+Lunar.Name = "Lunar"
+Lunar.Parent = ScrollingFrame
+Lunar.BackgroundColor3 = Color3.fromRGB(43, 43, 43)
+Lunar.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Lunar.BorderSizePixel = 0
+Lunar.Position = UDim2.new(0.106742911, 0, 0.205740333, 0)
+Lunar.Size = UDim2.new(0.887218058, 0, -0.0573434904, 0)
+Lunar.Font = Enum.Font.Unknown
+Lunar.Text = "Lunar"
+Lunar.TextColor3 = Color3.fromRGB(0, 0, 0)
+Lunar.TextScaled = true
+Lunar.TextSize = 14.000
+Lunar.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+Lunar.TextStrokeTransparency = 0.000
+Lunar.TextWrapped = true
+
+TextLabel_2.Parent = Frame
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.301814228, 0, -0.102588311, 0)
+TextLabel_2.Size = UDim2.new(0.437546164, 0, 0.0997386351, 0)
+TextLabel_2.Font = Enum.Font.Unknown
+TextLabel_2.Text = "Petite Studios"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextStrokeTransparency = 0.000
+TextLabel_2.TextWrapped = true
+
+TextLabel_3.Parent = Frame
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.BorderSizePixel = 0
+TextLabel_3.Position = UDim2.new(0.858017027, 0, -0.071241796, 0)
+TextLabel_3.Size = UDim2.new(0.140904695, 0, 0.0683922097, 0)
+TextLabel_3.Font = Enum.Font.Unknown
+TextLabel_3.Text = "V1.2"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextScaled = true
+TextLabel_3.TextSize = 14.000
+TextLabel_3.TextStrokeTransparency = 0.000
+TextLabel_3.TextWrapped = true
+
+VulcanicGUI.Name = "VulcanicGUI"
+VulcanicGUI.Parent = Frame
+VulcanicGUI.BackgroundColor3 = Color3.fromRGB(59, 59, 59)
+VulcanicGUI.BorderColor3 = Color3.fromRGB(0, 0, 0)
+VulcanicGUI.BorderSizePixel = 0
+VulcanicGUI.Position = UDim2.new(0.310986817, 0, 0.0325443074, 0)
+VulcanicGUI.Size = UDim2.new(0.659217834, 0, 0.439182371, 0)
+VulcanicGUI.Visible = false
+
+On.Name = "On"
+On.Parent = VulcanicGUI
+On.BackgroundColor3 = Color3.fromRGB(81, 81, 81)
+On.BorderColor3 = Color3.fromRGB(0, 0, 0)
+On.BorderSizePixel = 0
+On.Position = UDim2.new(0.0659715235, 0, 0.330013514, 0)
+On.Size = UDim2.new(0.891999424, 0, 0.332542926, 0)
+On.Font = Enum.Font.SourceSansBold
+On.Text = "TP (1  time)"
+On.TextColor3 = Color3.fromRGB(0, 0, 0)
+On.TextScaled = true
+On.TextSize = 14.000
+On.TextWrapped = true
+
+UICorner_2.Parent = On
+
+VulcanicG.Name = "VulcanicG"
+VulcanicG.Parent = VulcanicGUI
+VulcanicG.BackgroundColor3 = Color3.fromRGB(59, 59, 59)
+VulcanicG.BorderColor3 = Color3.fromRGB(0, 0, 0)
+VulcanicG.BorderSizePixel = 0
+VulcanicG.Position = UDim2.new(-0.00395156955, 0, 1.12135053, 0)
+VulcanicG.Size = UDim2.new(0.997867227, 0, 1.01532769, 0)
+
+On_2.Name = "On"
+On_2.Parent = VulcanicG
+On_2.BackgroundColor3 = Color3.fromRGB(81, 81, 81)
+On_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+On_2.BorderSizePixel = 0
+On_2.Position = UDim2.new(0.0501642488, 0, 0.330013573, 0)
+On_2.Size = UDim2.new(0.355467081, 0, 0.332542956, 0)
+On_2.Font = Enum.Font.SourceSansBold
+On_2.Text = "ON"
+On_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+On_2.TextScaled = true
+On_2.TextSize = 14.000
+On_2.TextWrapped = true
+
+UICorner_3.Parent = On_2
+
+off.Name = "off"
+off.Parent = VulcanicG
+off.BackgroundColor3 = Color3.fromRGB(72, 72, 72)
+off.BorderColor3 = Color3.fromRGB(0, 0, 0)
+off.BorderSizePixel = 0
+off.Position = UDim2.new(0.568910837, 0, 0.330013573, 0)
+off.Size = UDim2.new(0.379226476, 0, 0.326393574, 0)
+off.Font = Enum.Font.SourceSansBold
+off.Text = "OFF"
+off.TextColor3 = Color3.fromRGB(0, 0, 0)
+off.TextScaled = true
+off.TextSize = 14.000
+off.TextWrapped = true
+
+UICorner_4.Parent = off
+
+TextLabel_4.Parent = VulcanicG
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_4.BorderSizePixel = 0
+TextLabel_4.Position = UDim2.new(0.281178236, 0, 0.781925261, 0)
+TextLabel_4.Size = UDim2.new(0, 109, 0, 18)
+TextLabel_4.Font = Enum.Font.SourceSansItalic
+TextLabel_4.Text = "LOOP"
+TextLabel_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_4.TextScaled = true
+TextLabel_4.TextSize = 14.000
+TextLabel_4.TextWrapped = true
+
+TextLabel_5.Parent = VulcanicGUI
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.BackgroundTransparency = 1.000
+TextLabel_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_5.BorderSizePixel = 0
+TextLabel_5.Position = UDim2.new(0.281178236, 0, 0.781925261, 0)
+TextLabel_5.Size = UDim2.new(0, 109, 0, 18)
+TextLabel_5.Font = Enum.Font.SourceSansItalic
+TextLabel_5.Text = "VulCanic"
+TextLabel_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_5.TextScaled = true
+TextLabel_5.TextSize = 14.000
+TextLabel_5.TextWrapped = true
+
+LunarGUI.Name = "LunarGUI"
+LunarGUI.Parent = Frame
+LunarGUI.BackgroundColor3 = Color3.fromRGB(59, 59, 59)
+LunarGUI.BorderColor3 = Color3.fromRGB(0, 0, 0)
+LunarGUI.BorderSizePixel = 0
+LunarGUI.Position = UDim2.new(0.310986817, 0, 0.0325443074, 0)
+LunarGUI.Size = UDim2.new(0.659217834, 0, 0.439182371, 0)
+LunarGUI.Visible = false
+
+On_3.Name = "On"
+On_3.Parent = LunarGUI
+On_3.BackgroundColor3 = Color3.fromRGB(81, 81, 81)
+On_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+On_3.BorderSizePixel = 0
+On_3.Position = UDim2.new(0.0659715235, 0, 0.330013514, 0)
+On_3.Size = UDim2.new(0.891999424, 0, 0.332542926, 0)
+On_3.Font = Enum.Font.SourceSansBold
+On_3.Text = "TP (1  time)"
+On_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+On_3.TextScaled = true
+On_3.TextSize = 14.000
+On_3.TextWrapped = true
+
+UICorner_5.Parent = On_3
+
+LunarG.Name = "LunarG"
+LunarG.Parent = LunarGUI
+LunarG.BackgroundColor3 = Color3.fromRGB(59, 59, 59)
+LunarG.BorderColor3 = Color3.fromRGB(0, 0, 0)
+LunarG.BorderSizePixel = 0
+LunarG.Position = UDim2.new(-0.00395156955, 0, 1.12135053, 0)
+LunarG.Size = UDim2.new(0.997867227, 0, 1.01532769, 0)
+
+On_4.Name = "On"
+On_4.Parent = LunarG
+On_4.BackgroundColor3 = Color3.fromRGB(81, 81, 81)
+On_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+On_4.BorderSizePixel = 0
+On_4.Position = UDim2.new(0.0501642488, 0, 0.330013573, 0)
+On_4.Size = UDim2.new(0.355467081, 0, 0.332542956, 0)
+On_4.Font = Enum.Font.SourceSansBold
+On_4.Text = "ON"
+On_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+On_4.TextScaled = true
+On_4.TextSize = 14.000
+On_4.TextWrapped = true
+
+UICorner_6.Parent = On_4
+
+off_2.Name = "off"
+off_2.Parent = LunarG
+off_2.BackgroundColor3 = Color3.fromRGB(72, 72, 72)
+off_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+off_2.BorderSizePixel = 0
+off_2.Position = UDim2.new(0.568910837, 0, 0.330013573, 0)
+off_2.Size = UDim2.new(0.379226476, 0, 0.326393574, 0)
+off_2.Font = Enum.Font.SourceSansBold
+off_2.Text = "OFF"
+off_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+off_2.TextScaled = true
+off_2.TextSize = 14.000
+off_2.TextWrapped = true
+
+UICorner_7.Parent = off_2
+
+TextLabel_6.Parent = LunarG
+TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.BackgroundTransparency = 1.000
+TextLabel_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_6.BorderSizePixel = 0
+TextLabel_6.Position = UDim2.new(0.281178236, 0, 0.781925261, 0)
+TextLabel_6.Size = UDim2.new(0, 109, 0, 18)
+TextLabel_6.Font = Enum.Font.SourceSansItalic
+TextLabel_6.Text = "LOOP"
+TextLabel_6.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_6.TextScaled = true
+TextLabel_6.TextSize = 14.000
+TextLabel_6.TextWrapped = true
+
+TextLabel_7.Parent = LunarGUI
+TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.BackgroundTransparency = 1.000
+TextLabel_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_7.BorderSizePixel = 0
+TextLabel_7.Position = UDim2.new(0.281178236, 0, 0.781925261, 0)
+TextLabel_7.Size = UDim2.new(0, 109, 0, 18)
+TextLabel_7.Font = Enum.Font.SourceSansItalic
+TextLabel_7.Text = "Lunar"
+TextLabel_7.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_7.TextScaled = true
+TextLabel_7.TextSize = 14.000
+TextLabel_7.TextWrapped = true
+
+Open.Name = "Open"
+Open.Parent = PetiteWHI
+Open.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Open.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Open.BorderSizePixel = 0
+Open.Position = UDim2.new(0.968135238, 0, 0.654135346, 0)
+Open.Size = UDim2.new(0.0317740515, 0, 0.0639097765, 0)
+Open.Image = "rbxassetid://17208407251"
+
+UICorner_8.Parent = Open
+
+-- Scripts:
+
+local function WPLNDQ_fake_script() -- Vulcanic.LocalScript 
+	local script = Instance.new('LocalScript', Vulcanic)
+
+	script.Parent.MouseButton1Click:Connect(function() 
+		if script.Parent.Parent.Parent.VulcanicGUI.Visible then
+			script.Parent.Parent.Parent.LunarGUI.Visible = false
+		else
+			script.Parent.Parent.Parent.VulcanicGUI.Visible = true
+		end
+	end)
+	
+end
+coroutine.wrap(WPLNDQ_fake_script)()
+local function AKUAO_fake_script() -- Lunar.LocalScript 
+	local script = Instance.new('LocalScript', Lunar)
+
+	script.Parent.MouseButton1Click:Connect(function() 
+		if script.Parent.Parent.Parent.LunarGUI.Visible then
+			script.Parent.Parent.Parent.VulcanicGUI.Visible = false
+		else
+			script.Parent.Parent.Parent.LunarGUI.Visible = true
+		end
+	end)
+	
+end
+coroutine.wrap(AKUAO_fake_script)()
+local function LUTSNHR_fake_script() -- On.LocalScript 
+	local script = Instance.new('LocalScript', On)
+
+	script.Parent.MouseButton1Click:Connect(function() 
+		local Char = game.Players.LocalPlayer.Character
+		local Root = Char:WaitForChild("HumanoidRootPart")
+	
+		local Folder = game.Workspace.Islands["Volcano Island"]
+	
+		local Timer = 0.1
+		local TeleportDelay = 0.1
+	
+		local Started = os.clock()
+	
+		while true do
+			for i,v in pairs(Folder:GetChildren()) do
+				if (os.clock() - Started) >= Timer then break end
+				if not v:FindFirstChild("Body") then continue end
+	
+				Root.CFrame = v:FindFirstChild("Body").CFrame
+	
+				task.wait(TeleportDelay)
+			end
+			task.wait()
+		end
+	end)
+	
+	
+	
+end
+coroutine.wrap(LUTSNHR_fake_script)()
+local function WIHK_fake_script() -- On_2.LocalScript 
+	local script = Instance.new('LocalScript', On_2)
+
+	script.Parent.MouseButton1Click:Connect(function() 
+		_G.Vc = true
+	
+		while _G.Vc == true do
+			local Char = game.Players.LocalPlayer.Character
+			local Root = Char:WaitForChild("HumanoidRootPart")
+	
+			local Folder = game.Workspace.Islands["Volcano Island"]
+	
+			local Timer = 0.1
+			local TeleportDelay = 0.1
+	
+			local Started = os.clock()
+	
+			while true do
+				for i,v in pairs(Folder:GetChildren()) do
+					if (os.clock() - Started) >= Timer then break end
+					if not v:FindFirstChild("Body") then continue end
+	                while wait() do
+					Root.CFrame = v:FindFirstChild("Body").CFrame
+	                end
+					task.wait(TeleportDelay)
+				end
+				task.wait()
+			end
+		end
+	end)
+	
+	
+	
+end
+coroutine.wrap(WIHK_fake_script)()
+local function VGTD_fake_script() -- off.LocalScript 
+	local script = Instance.new('LocalScript', off)
+
+	script.Parent.MouseButton1Click:Connect(function() 
+		_G.Vc = false
+	end)
+end
+coroutine.wrap(VGTD_fake_script)()
+local function YPBFCGW_fake_script() -- On_3.LocalScript 
+	local script = Instance.new('LocalScript', On_3)
+
+	script.Parent.MouseButton1Click:Connect(function() 
+		local Char = game.Players.LocalPlayer.Character
+		local Root = Char:WaitForChild("HumanoidRootPart")
+	
+		local Folder = game.Workspace.Islands["Lunar Islands"]
+	
+		local Timer = 0.1
+		local TeleportDelay = 0.1
+	
+		local Started = os.clock()
+	
+		while true do
+			for i,v in pairs(Folder:GetChildren()) do
+				if (os.clock() - Started) >= Timer then break end
+				if not v:FindFirstChild("Body") then continue end
+	
+				Root.CFrame = v:FindFirstChild("Body").CFrame
+	
+				task.wait(TeleportDelay)
+			end
+			task.wait()
+		end
+	end)
+	
+	
+	
+end
+coroutine.wrap(YPBFCGW_fake_script)()
+local function NLTM_fake_script() -- On_4.LocalScript 
+	local script = Instance.new('LocalScript', On_4)
+
+	script.Parent.MouseButton1Click:Connect(function() 
+		_G.Li = true
+	
+		while _G.Li == true do
+			local Char = game.Players.LocalPlayer.Character
+			local Root = Char:WaitForChild("HumanoidRootPart")
+	
+			local Folder = game.Workspace.Islands["Lunar Islands"]
+	
+			local Timer = 0.1
+			local TeleportDelay = 0.1
+	
+			local Started = os.clock()
+	
+			while true do
+				for i,v in pairs(Folder:GetChildren()) do
+					if (os.clock() - Started) >= Timer then break end
+					if not v:FindFirstChild("Body") then continue end
+	                while wait() do
+					Root.CFrame = v:FindFirstChild("Body").CFrame
+	                end
+					task.wait(TeleportDelay)
+				end
+				task.wait()
+			end
+		end
+	end)
+	
+	
+	
+end
+coroutine.wrap(NLTM_fake_script)()
+local function BWLT_fake_script() -- off_2.LocalScript 
+	local script = Instance.new('LocalScript', off_2)
+
+	script.Parent.MouseButton1Click:Connect(function() 
+		_G.Vc = false
+	end)
+end
+coroutine.wrap(BWLT_fake_script)()
+local function RHVM_fake_script() -- Open.LocalScript 
+	local script = Instance.new('LocalScript', Open)
+
+	script.Parent.MouseButton1Click:Connect(function() 
+		if script.Parent.Parent.Frame.Visible then
+			script.Parent.Parent.Frame.Visible = false
+		else
+			script.Parent.Parent.Frame.Visible = true
+		end
+	end)
+	
+		
+	
+end
+coroutine.wrap(RHVM_fake_script)()
+local function PQOPJM_fake_script() -- Open.afk 
+	local script = Instance.new('LocalScript', Open)
+
+	local FARM = script.Parent 
+	local Character = game.Workspace:FindFirstChild(game.Players.LocalPlayer.Name) 
+	
+	FARM.MouseButton1Click:connect(function()
+		local vu = game:GetService("VirtualUser")
+		game:GetService("Players").LocalPlayer.Idled:connect(function()
+			vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+			wait(1)
+			vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+		end)
+	end)
+	
+end
+coroutine.wrap(PQOPJM_fake_script)()
